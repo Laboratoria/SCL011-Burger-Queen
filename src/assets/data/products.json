@@ -30,49 +30,51 @@
         {
             "id": 5,
             "product": "Hamburguesa Pollo Simple",
-            "price": 1500,
+            "price": 1000,
             "img": ""
         },
         {
             "id": 6,
             "product": "Hamburguesa Vacuno Simple",
-            "price": 1500,
+
+            "price": 1000,
             "img": ""
         },
         {
             "id": 7,
             "product": "Hamburguesa Vegetariana Simple",
-            "price": 1500,
-            "img":""
+
+            "price": 1000,
+             "img":""
         },
         {
             "id": 8,
             "product": "Hamburguesa Pollo Doble",
-            "price": 2500,
+            "price": 1500,
             "img":""
         },
         {
             "id": 9,
             "product": "Hamburguesa Vacuno Doble",
-            "price": 2500,
+            "price": 1500,
             "img":""
         },
         {
             "id": 10,
             "product": "Hamburguesa Vegetariana Doble",
-            "price": 2500,
+            "price": 1500,
             "img":""
         },
         {
             "id": 11,
             "product": "Huevo",
-            "price": 500,
+            "price": 100,
             "img": ""
         },
         {
             "id": 12,
             "product": "Queso",
-            "price": 500, 
+            "price": 100, 
             "img": ""
         },
         {
@@ -90,13 +92,13 @@
         {
             "id": 15,
             "product": "Agua 500ml",
-            "price": 500,
+            "price": 700,
             "img":""
         },
         {
             "id": 16,
             "product": "Agua 750ml",
-            "price": 800,
+            "price": 1000,
             "img": ""
         },
         {
