@@ -36,14 +36,16 @@
         {
             "id": 6,
             "product": "Hamburguesa Vacuno Simple",
+
             "price": 1000,
             "img": ""
         },
         {
             "id": 7,
             "product": "Hamburguesa Vegetariana Simple",
+
             "price": 1000,
-            "img":""
+             "img":""
         },
         {
             "id": 8,
