@@ -2,6 +2,7 @@
   "name": "burger-queen",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://burger-queen-2dc5a.firebaseapp.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -9,6 +10,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-fire": "^1.1.2",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0"
   },
   "scripts": {
