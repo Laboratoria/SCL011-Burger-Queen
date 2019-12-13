@@ -2,7 +2,7 @@
   "name": "burger-queen",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://burger-queen-2dc5a.firebaseapp.com/",
+  "homepage": "https://burger-queen-2dc5a.firebaseapp.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -33,5 +33,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-plugin-react": "^7.17.0"
   }
 }
