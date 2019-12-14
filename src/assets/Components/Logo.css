@@ -1,0 +1,14 @@
+.logo-container{
+ 
+    padding: 0%;
+    margin: 0%;
+    width:400px;
+    margin-left: 0vw;
+}
+.logo-container>img {
+    width: 334px;
+    height: 78px;
+    padding: 0%;
+   
+
+}
