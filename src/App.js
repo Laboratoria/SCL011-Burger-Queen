@@ -1,14 +1,13 @@
+  
 import React from 'react';
-import logo from './logo.svg';
+import logo from '../src/assets/img/logo.png';
 import './App.css';
-import '../src/assets/Components/Product image.js'
-import '../src/assets/Components/Product image.css'
+
 
 function App() {
   return (
     <div className="App">
-      
-      
+     <img src={logo}/>
     </div>
   );
 }
