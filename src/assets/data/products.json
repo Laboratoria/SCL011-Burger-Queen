@@ -4,25 +4,25 @@
             "id": 1,
             "product": "Café americano",
             "price": 500,
-            "img": ""
+            "img": "https://i.ibb.co/7SX0Gg2/Cafe-Americano.png" 
         },
         {
             "id": 2,
             "product": "Café con leche",
             "price": 700,
-            "img": ""
+            "img": "https://i.ibb.co/GJkNVYP/Cafe-con-Leche.png"  
         },
         {
             "id": 3,
             "product": "Sandwich de jamón y queso",
             "price": 1000,
-            "img": ""
+            "img": "https://i.ibb.co/ZVzrWbj/Queso-Jamon.png"
         },
         {
             "id": 4,
             "product": "Jugo natural",
             "price": 700,
-            "img":""
+            "img":"https://i.ibb.co/R6BFB6f/Jugo-de-Frutas.png"
         }
     ],
 
@@ -31,39 +31,39 @@
             "id": 5,
             "product": "Hamburguesa Pollo Simple",
             "price": 1000,
-            "img": ""
+            "img": "https://i.ibb.co/kGHSn6J/haburguesa-Simple.png"  
         },
         {
             "id": 6,
             "product": "Hamburguesa Vacuno Simple",
 
             "price": 1000,
-            "img": ""
+            "img": "https://i.ibb.co/kGHSn6J/haburguesa-Simple.png"  
         },
         {
             "id": 7,
             "product": "Hamburguesa Vegetariana Simple",
 
             "price": 1000,
-             "img":""
+             "img":"https://i.ibb.co/kGHSn6J/haburguesa-Simple.png"  
         },
         {
             "id": 8,
             "product": "Hamburguesa Pollo Doble",
             "price": 1500,
-            "img":""
+            "img":"https://i.ibb.co/zxfkJRr/haburguesa-Doble.png"
         },
         {
             "id": 9,
             "product": "Hamburguesa Vacuno Doble",
             "price": 1500,
-            "img":""
+            "img":"https://i.ibb.co/zxfkJRr/haburguesa-Doble.png"
         },
         {
             "id": 10,
             "product": "Hamburguesa Vegetariana Doble",
             "price": 1500,
-            "img":""
+            "img":"https://i.ibb.co/zxfkJRr/haburguesa-Doble.png"
         },
         {
             "id": 11,
@@ -81,25 +81,25 @@
             "id": 13,
             "product": "Papas Fritas",
             "price": 500,
-            "img":""
+            "img":"https://i.ibb.co/NTygjyv/papas-Fritas.png"
         },
         {
             "id": 14,
             "product": "Onion Rings",
             "price": 500,
-            "img": ""
+            "img": "https://i.ibb.co/TWYd7pk/aros-Cebolla.png"
         },
         {
             "id": 15,
             "product": "Agua 500ml",
             "price": 700,
-            "img":""
+            "img":"https://i.ibb.co/hLTLj6Y/agua500.png" 
         },
         {
             "id": 16,
             "product": "Agua 750ml",
             "price": 1000,
-            "img": ""
+            "img": "https://i.ibb.co/4pQrVs9/agua750.png" 
         },
         {
             "id": 17,
@@ -111,7 +111,8 @@
             "id": 18,
             "product": "Bebida 750ml",
             "price": 1000,
-            "img":""
+            "img":"https://i.ibb.co/hLTLj6Y/agua500.png" 
         }
+      
     ]
 }

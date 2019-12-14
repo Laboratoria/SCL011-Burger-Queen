@@ -1,11 +1,14 @@
+  
 import React from 'react';
-//import logo from './logo.svg';
+import Logo from '../src/assets/Components/Logo'
 import './App.css';
 import Home from './assets/views/home'
+
 
 function App() {
   return (
     <div className="App">
+    <Logo/>
       <Home/>
     </div>
   );
