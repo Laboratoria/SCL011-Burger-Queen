@@ -1,0 +1,25 @@
+body{
+    margin-top: 0%;
+}
+.navigation-style{
+    float: right;
+    background-color: #430064;
+    width: 50vh;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    align-items: center;
+}
+.navigation-style ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+}
+a{
+    color: #FEDC63;
+    padding: 5%;
+    
+}
+
