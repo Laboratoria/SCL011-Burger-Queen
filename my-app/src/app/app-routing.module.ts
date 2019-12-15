@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { startScreenComponent } from './components/startScreen/startScreen.component';
 
-const routes: Routes = [];
+const ROUTES: Routes = [
+{ path: 'home', component:startScreenComponent },
+{ path: '', pathMatch: 'full', redirectTo: 'home' },
+{ path: '**', component: startScreenComponent },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(ROUTES)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

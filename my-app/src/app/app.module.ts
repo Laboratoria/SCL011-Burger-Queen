@@ -1,20 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 
+//Rutas
 import { AppRoutingModule } from './app-routing.module';
+
+//Servicios
+
+//Componentes
 import { AppComponent } from './app.component';
+import { startScreenComponent } from './components/startScreen/startScreen.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    startScreenComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
