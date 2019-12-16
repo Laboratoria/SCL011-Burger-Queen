@@ -1,6 +1,6 @@
   
 import React from 'react';
-import Logo from '../src/assets/Components/Logo'
+import Logo from './assets/componets/Logo'
 import './App.css';
 import Home from './assets/views/home'
 
