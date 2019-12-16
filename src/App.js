@@ -1,9 +1,8 @@
   
 import React from 'react';
-import Logo from '../src/assets/Components/Logo'
+import Logo from './assets/components/Logo'
 import './App.css';
 import Home from './assets/views/home'
-
 
 function App() {
   return (
