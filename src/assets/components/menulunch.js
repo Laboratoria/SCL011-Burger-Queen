@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import json1 from '../archivo.json'
-import ButtonGeneric from './comidas'
+import json1 from '../../data.json'
+import ButtonMenu from './buttonmenu'
 
-class MenuDesayuno extends Component{
+class MenuLunch extends Component{
   constructor(props){
     super(props);
      this.state={
@@ -14,10 +14,10 @@ class MenuDesayuno extends Component{
     
     return <div>
     
-      {this.state.json.map((element, i) => <ButtonGeneric key={element.id}  productProp={element}  />)}
+      {this.state.json.map((element, i) => <ButtonMenu key={element.id}  productProp={element}  />)}
   
     </div>
   }
 }
 
-export default MenuDesayuno
+export default MenuLunch

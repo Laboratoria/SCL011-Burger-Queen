@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 
 
-class InputName extends React.Component {
+class InputName extends Component {
     render (){
         return (
         <div> 

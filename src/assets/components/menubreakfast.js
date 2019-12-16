@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import json1 from '../ejemplo/archivo.json'
+import json1 from '../../data.json'
 import ButtonMenu from './buttonmenu'
 
 
-class Menu extends Component{
+class MenuBreakFast extends Component{
   constructor(props){
     super(props);
     this.state={
@@ -23,4 +23,4 @@ class Menu extends Component{
   }
 }
 
-export default Menu
+export default MenuBreakFast
