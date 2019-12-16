@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Glegoo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+/* Estilos Generales */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/*Contenedor de la imagen*/
+
+.container-image {
+    background-image: url("../../../assets/img/waiterQueen.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-image::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(63, 146, 210);
+    opacity: 0.6;
+}
+
+
+/*Bienvenido*/
+
+.welcome {
+    z-index: 1;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenBtns {
+    margin: 10px;
+}
+
+a.btn {
+    color: rgb(253, 253, 253);
+    margin: 5px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: rgb(253, 253, 253) 0 0px 0px 2px inset;
+}
+
+a.btn:hover {
+    color: rgb(63, 146, 210);
+    background: rgba(255, 255, 255, 0.85);
+}
