@@ -18,7 +18,6 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { MesasComponent } from './components/mesas/mesas.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
