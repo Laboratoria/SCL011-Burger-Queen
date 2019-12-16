@@ -8,8 +8,7 @@ import {MenuComponent } from './components/menu/menu.component';
 const ROUTES: Routes = [
 { path: 'home', component:startScreenComponent },
 { path: 'menu', component:MenuComponent },
-{ path: '', pathMatch: 'full', redirectTo: 'home' },
-{ path: '**', component: startScreenComponent },
+{ path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({
