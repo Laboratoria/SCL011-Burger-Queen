@@ -11,13 +11,17 @@ import { AppRoutingModule } from './app-routing.module';
 //Componentes
 import { AppComponent } from './app.component';
 import { startScreenComponent } from './components/startScreen/startScreen.component';
+import { MenuComponent } from './components/menu/menu.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    startScreenComponent 
+    startScreenComponent,
+    MenuComponent,
+    
   ],
   imports: [
     BrowserModule,
