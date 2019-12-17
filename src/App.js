@@ -1,13 +1,16 @@
-import React from 'react';
+import React,{Component} from 'react';
 import './App.css';
+import Menu from './Component/menu';
 
-
-class App extends React.Component{
-  render(){
-    return<h1>Hola React</h1>
+class App extends Component{
+  
+render(){
+  return(
+    <div>
+      <Menu/>
+    </div>
+  );
   }
 }
-
-
 
 export default App;
