@@ -1,19 +1,22 @@
 import React, {Component} from 'react';
 import './App.css';
-import data from './data.json';
+import { useFirebaseApp, useUser } from "reactfire";
+import Auth from "./Auth";
 
-class App extends Component {
-    constructor () {
-        super ()
-        this.state = {
-            name: "cami"
-        }
-    };
+function App () {
+    const firebase = useFirebaseApp();
+    console.log(firebase)
 
-    render () {
-        return <h1>hola {this.state.name}</h1>
-    }
+    const user = useUser();
+
+    return (
+        <div className="user-app">
+            { user && <p>Usuario: {user.email}</p> }
+            <Auth />
+        </div>
+
+    )
 }
 
-
 export default App;
+
