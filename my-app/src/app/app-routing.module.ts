@@ -8,6 +8,7 @@ import { MesasComponent } from './components/mesas/mesas.component';
 
 const ROUTES: Routes = [
 { path: 'home', component:startScreenComponent },
+{ path: 'pedidos', component: PedidosComponent},
 { path: 'menu', component:MenuComponent },
 { path: 'pedidos', component:PedidosComponent},
 { path: 'mesas', component:MesasComponent },
