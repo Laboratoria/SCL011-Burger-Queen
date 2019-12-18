@@ -1,10 +1,9 @@
 .button-container {
-  width: 650px;
-  height: 560;
   grid-gap:  20px;
   display: grid;
   grid-template-columns: auto auto;
-
+  float: left;
+  padding: 5vh;
     
 }
 .button-container>img {

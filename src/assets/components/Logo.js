@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from '../img/logo.png'
 import './Logo.css'
 
-class Logo extends React.Component{
+class Logo extends Component{
    
     
     render(){
@@ -11,8 +11,6 @@ class Logo extends React.Component{
         </div>
     }
         
-        
-    
 }
 
 
