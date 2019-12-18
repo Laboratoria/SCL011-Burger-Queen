@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { startScreenComponent } from './components/startScreen/startScreen.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { PedidosComponent } from './components/pedidos/pedidos.component';
 
 
 
@@ -21,6 +22,7 @@ import { MenuComponent } from './components/menu/menu.component';
     AppComponent,
     startScreenComponent,
     MenuComponent,
+    PedidosComponent,
     
   ],
   imports: [
