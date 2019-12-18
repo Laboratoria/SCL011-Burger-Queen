@@ -1,22 +1,39 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
-import { useFirebaseApp, useUser } from "reactfire";
-import Auth from "./Auth";
+import Menu from './Component/menu';
+
+
+import Auth from './Auth';
+import { useUser } from 'reactfire' ;
 
 function App () {
-    const firebase = useFirebaseApp();
-    console.log(firebase)
 
     const user = useUser();
 
     return (
-        <div className="user-app">
-            { user && <p>Usuario: {user.email}</p> }
+        <div className="App">
+            { user && <p>Usuario:{user.email}</p>}
             <Auth />
+            <Menu/>
         </div>
-
     )
+}
+  
+export default App;
+
+
+/*class App extends Component{
+  
+render(){
+  return(
+    <div>
+      <Menu/>
+    </div>
+  );
+  }
 }
 
 export default App;
+*/
+
 
