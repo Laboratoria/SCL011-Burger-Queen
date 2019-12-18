@@ -10,6 +10,7 @@ const ROUTES: Routes = [
 { path: 'home', component:startScreenComponent },
 { path: 'pedidos', component: PedidosComponent},
 { path: 'menu', component:MenuComponent },
+
 { path: '**', pathMatch: 'full', redirectTo: 'home' },
 
 
