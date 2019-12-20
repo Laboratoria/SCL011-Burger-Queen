@@ -1,15 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Glegoo&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
-/* Estilos Generales */
-
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-
 /*Contenedor de la imagen*/
 
 .container-image {
@@ -39,7 +30,6 @@
 
 .welcome {
     z-index: 1;
-    font-family: 'Quicksand', sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
