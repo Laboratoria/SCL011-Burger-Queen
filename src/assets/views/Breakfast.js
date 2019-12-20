@@ -3,6 +3,8 @@ import Menu from '../components/Menu'
 import products from  '../data/products.json'
 import Logo from '../components/Logo'
 import Navigation from '../components/Navigation'
+import Inputclient from '../components/Inputclient'
+
 
 class Breakfast extends Component{
     constructor(){
@@ -17,6 +19,7 @@ class Breakfast extends Component{
            <div>
                <Logo/>
                <Navigation/>
+               <Inputclient/>
 
                 {this.state.products.Breakfast.map(e=>
                 <Menu 
