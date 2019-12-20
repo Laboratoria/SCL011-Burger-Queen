@@ -26,6 +26,7 @@ import { MesasComponent } from './components/mesas/mesas.component';
     PedidosComponent,
     MesasComponent,  
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
