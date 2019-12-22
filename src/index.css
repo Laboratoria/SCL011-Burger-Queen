@@ -22,3 +22,13 @@ code {
 .divsHome h1{
   color: #430064;
 }
+.table-detail{
+  width: 44vh;
+  display: grid;
+  float: left;
+  border: solid #000
+
+}
+.holi{
+display: flex;
+}
