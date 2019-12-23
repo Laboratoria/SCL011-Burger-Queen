@@ -15,21 +15,21 @@
 </header>
 
 
-<section class="main-g">
+<section class="main-g d-flex justify-content-center">
 
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Nombre de la mesa</th>
-                <th scope="col">Numero de la mesa</th>
+                <th scope="col" class="table-primary">Mesa</th>
 
             </tr>
         </thead>
         <tbody>
 
-            <tr>
-                <th scope="row">Mesa 1</th>
-                <th scope="row"> 1</th>
+            <tr *ngFor="let table of tabls">
+
+                <th scope="row"> {{table.name}}</th>
+
 
             </tr>
 

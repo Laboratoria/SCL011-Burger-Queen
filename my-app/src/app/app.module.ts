@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+//Modulo de peticiones http
+import { HttpClientModule } from '@angular/common/http'
 
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
@@ -17,8 +19,6 @@ import { MesasComponent } from './components/mesas/mesas.component';
 
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +30,8 @@ import { MesasComponent } from './components/mesas/mesas.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-
-    
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

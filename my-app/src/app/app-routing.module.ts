@@ -6,10 +6,6 @@ import { PedidosComponent } from "../app/components/pedidos/pedidos.component";
 import { MesasComponent } from './components/mesas/mesas.component';
 
 
-
-
-
-
 const ROUTES: Routes = [
 { path: 'home', component:startScreenComponent },
 { path: 'menu', component:MenuComponent },
@@ -20,7 +16,6 @@ const ROUTES: Routes = [
 ];
 
 
-];
 @NgModule({
   imports: [RouterModule.forRoot(ROUTES)],
   exports: [RouterModule]
