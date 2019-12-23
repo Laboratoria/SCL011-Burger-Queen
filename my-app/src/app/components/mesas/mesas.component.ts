@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-mesas',
@@ -8,9 +8,12 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class MesasComponent implements OnInit {
 
+  // Declaro la variable de tipo array para obtener un listado de mesas
+  //mesas:Mesasmodel[]=[]
+
   constructor() { }
 
   ngOnInit() {
   }
-  faCoffee = faCoffee;
+  
 }

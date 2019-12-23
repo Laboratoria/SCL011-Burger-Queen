@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
@@ -32,7 +32,7 @@ import { MesasComponent } from './components/mesas/mesas.component';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    FontAwesomeModule
+  
     
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
