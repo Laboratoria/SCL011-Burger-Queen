@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidosComponent implements OnInit {
 
-  test = "a ver";
-
   constructor() { }
 
   ngOnInit() {

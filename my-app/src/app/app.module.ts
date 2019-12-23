@@ -3,7 +3,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 
-
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
 
@@ -19,20 +18,20 @@ import { MesasComponent } from './components/mesas/mesas.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     startScreenComponent,
     MenuComponent,
     PedidosComponent,
-    MesasComponent,
-    
+    MesasComponent,  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-  
+
     
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
