@@ -6,7 +6,7 @@ class InputName extends Component {
     render (){
         return (
         <div> 
-            <input type="text" classname= "inputName" id= "inputGeneric"  placeholder = "Nombre cliente" />
+            <input type="text" className= "inputName" id= "inputGeneric"  placeholder = "Nombre cliente" />
         </div>
 
         );

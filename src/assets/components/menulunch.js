@@ -3,6 +3,7 @@ import json1 from '../../data.json'
 import ButtonMenu from './buttonmenu'
 import InputName from './input.js'
 import Combobox from './combobox.js'
+import db from '../../firebase'
 
 class MenuLunch extends Component{
   constructor(props){
@@ -60,24 +61,43 @@ clickBtn2=(productMenu)=>{
   })
   
 } 
+  sendKitchen=()=>{
+  db.collection("orders").add({
+    productTotal: this.state.product,
+    totalOrderPrice: this.state.price[this.state.price.length - 1]
+   
+  })
+  .then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+    alert("Pedido envaido a cocina")
+  })
 
+  .catch(function(error) {
+    console.error("Error adding document: ", error);
+    alert("Error al enviar, intentelo denuevo")
+  });
+  }
 
   render(){
     
     return <div> 
       <Combobox/>
       <InputName/>
-    {this.state.json.map((element) => ( 
-    <ButtonMenu key={element.id} clickBtn={this.clickBtn2} productProp={element} />
-    ))}
-    {this.state.product.map((elementProduct,i)=> {return <div>
-   <p key ={elementProduct.id}>{elementProduct.price}{elementProduct.product}</p>
-   <button onClick={this.remove.bind(this, i ,elementProduct.price)} >Eliminar</button>
-   </div>
-   })}
+      {this.state.json.map((element) => ( 
+      <ButtonMenu key={element.id} clickBtn={this.clickBtn2} productProp={element} />
+
+      ))}
+
+     {this.state.product.map((elementProduct,i)=> {return <div>
+     <p key ={elementProduct.id}>{elementProduct.price}{elementProduct.product}</p>
+     <button onClick={this.remove.bind(this, i ,elementProduct.price)} >Eliminar</button>
+     </div>  
+
+     })}
    
-   <p>{this.state.price[this.state.price.length - 1]}</p>
-    </div>
+     <p>{this.state.price[this.state.price.length - 1]}</p>
+     <button onClick={()=>this.sendKitchen()}>Enviar</button>
+     </div>
   }
 }
 

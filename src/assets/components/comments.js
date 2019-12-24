@@ -6,7 +6,7 @@ class Comments extends Component {
     render (){
         return (
         <div> 
-            <input type="textarea" classname= "comments" id= "comments"  placeholder = "Comentarios" />
+            <input type="textarea" className= "comments" id= "comments"  placeholder = "Comentarios" />
         </div>
 
         );
