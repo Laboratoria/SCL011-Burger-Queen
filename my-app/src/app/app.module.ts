@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 
 //Servicios
+import { WaiqueenService } from '../app/services/waiqueen.service';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -26,15 +27,16 @@ import { MesasComponent } from './components/mesas/mesas.component';
     PedidosComponent,
     MesasComponent,  
   ],
-  
-  imports: [
+    imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [
+    WaiqueenService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
