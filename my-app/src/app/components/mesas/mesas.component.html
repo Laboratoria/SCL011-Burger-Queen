@@ -29,7 +29,7 @@
             <tr *ngFor="let table of tabls">
 
                 <th scope="row">
-                    <button (click)="getTable(table.tableNumber)" class="btn btn-primary" [routerLink]="['/menu']"> 
+                    <button (click)="getTable(table.tableNumber)" class="btntable" [routerLink]="['/menu']"> 
                                 {{table.name}}
                     </button>
                 </th>

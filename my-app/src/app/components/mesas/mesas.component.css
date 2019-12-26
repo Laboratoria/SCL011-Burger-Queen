@@ -44,3 +44,14 @@
     padding: 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
 }
+
+.btntable {
+    background-color: rgb(26, 135, 206);
+    border: none;
+    color: white;
+    padding: 10px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
