@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import "firebase/auth";
+// import  db from'./config';
 import { useFirebaseApp, useUser } from "reactfire";
 
 export default (props) => {

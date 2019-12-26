@@ -10,7 +10,7 @@ import firebaseConfig from './config'
 // suspense: el componente espera a la carga de firebase antes de hacer el render
 ReactDOM.render((
     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-        <Suspense fallback={"cargando la app, espera un poquito"}>
+        <Suspense fallback={"cargando la app"}>
         <App />
         </Suspense>
     </FirebaseAppProvider>

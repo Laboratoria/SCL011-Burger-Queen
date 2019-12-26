@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Menu from './Component/menu';
-
+import Breakfast from './Component/breakfast';
+import Lunch from './Component/lunch';
 
 import Auth from './Auth';
 import { useUser } from 'reactfire' ;
@@ -12,14 +12,20 @@ function App () {
 
     return (
         <div className="App">
-            { user && <p>Usuario:{user.email}</p>}
-            <Auth />
-            <Menu/>
+            { user && <p>Usuario:{user.email}</p> }
+            <Auth />   
+               <div>
+                <Breakfast />
+                <Lunch />
+              </div>
         </div>
-    )
+    
+    );
 }
   
 export default App;
+
+
 
 
 /*class App extends Component{
@@ -35,5 +41,4 @@ render(){
 
 export default App;
 */
-
 

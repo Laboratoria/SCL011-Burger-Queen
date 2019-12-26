@@ -10,7 +10,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
-    "reactfire": "^2.0.0-alpha.2"
+    "reactfire": "^2.0.0-alpha.2",
+    "reactstrap": "^8.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
