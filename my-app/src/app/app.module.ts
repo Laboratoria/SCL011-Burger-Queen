@@ -17,6 +17,7 @@ import { startScreenComponent } from './components/startScreen/startScreen.compo
 import { MenuComponent } from './components/menu/menu.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { MesasComponent } from './components/mesas/mesas.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MesasComponent } from './components/mesas/mesas.component';
     startScreenComponent,
     MenuComponent,
     PedidosComponent,
-    MesasComponent,  
+    MesasComponent,
+    NavbarComponent,  
   ],
     imports: [
     BrowserModule,
