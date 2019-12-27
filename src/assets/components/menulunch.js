@@ -76,6 +76,17 @@ clickBtn2=(productMenu)=>{
     console.error("Error adding document: ", error);
     alert("Error al enviar, intentelo denuevo")
   });
+     let productsFilter = this.state.product;
+     let priceFilter  =this.state.price
+
+     priceFilter=[]
+     productsFilter=[]
+     
+     this.setState({
+     product:productsFilter,
+     price:priceFilter
+
+    })
   }
 
   render(){
