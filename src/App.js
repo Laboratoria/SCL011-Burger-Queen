@@ -24,8 +24,7 @@ class App extends Component{
  
   
   </div>
-  <button>jasdjas</button>
-    <button>jasdjas</button>
+ 
   </Router>
   }
 
