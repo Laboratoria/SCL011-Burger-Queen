@@ -12,7 +12,7 @@ class App extends Component{
     
   render(){
     
-  return <Router> <div>
+  return <Router> <div className="App">
     <ButtonGeneric name="Mesero"/>
   
           <Link to="/"><ButtonGeneric name ="Desayuno"/></Link>
