@@ -92,6 +92,7 @@ class Lunch extends Component{
                <Logo/>
                {/* aquí se va imprimiendo el detalle según se 
                hace el pedido*/}
+                <Inputclient change={(e)=> this.handleChange(e.target)}/>
                <div className="table-detail">
                 <table>
                  <thead>
@@ -105,7 +106,7 @@ class Lunch extends Component{
                  <tr key ={index}>
                 <td>{e.product}</td>
                 <td>{e.price}</td>
-                <td><button onClick={() =>this.removeItem(index, e)}>Delete</button></td>
+                <td><button onClick={() =>this.removeItem(index, e)}>Borrar</button></td>
                 </tr>
                  )}
                  </tbody>
@@ -117,8 +118,10 @@ class Lunch extends Component{
                 </tfoot>
                </table>
                 </div>
-                <Inputclient change={(e)=> this.handleChange(e.target)}/>
-                <button onClick={()=>this.sendKitchen()}>Enviar a Cocina</button>
+                <div className="sendingkitchen">
+                <button  onClick={()=>this.sendKitchen()}>Enviar</button>
+               </div>
+
                </div>
 
                <div className="nav-btn">
