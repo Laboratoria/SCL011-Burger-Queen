@@ -13,3 +13,15 @@
    
 
 }
+@media only screen and (max-width: 600px) {
+    .logo-container{
+     width:200px;
+        
+    }
+    .logo-container>img {
+        width: 250px;
+        height: 10vh;
+           
+    
+    }
+}

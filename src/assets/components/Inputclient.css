@@ -1,8 +1,37 @@
 .input-container{
- 
-    padding: 0%;
-    margin: 0%;
-    width:400px;
-    margin-left: 0vw;
-    display: contents;
+    width: 44vh;
+    margin-top: 5vh;
+   
+    
+}
+.input-container>div>p{
+    font-size: 4vh;
+    padding: 0vh;
+    color: indigo;
+    
+}
+.input-container>div>input{
+    border-color: indigo;
+    background-color: rgba(254, 220, 99, 0.561);
+    margin:1vh;
+    width: 27vh;
+}
+.input-container>div>label{
+    margin-left: 3vh;
+}
+input#client{
+    margin-left: 5vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .input-container{
+        
+        margin-top: 3vh;
+       
+        
+    }
+    .input-container>div>input{
+       
+        width: 25vh;
+    } 
 }

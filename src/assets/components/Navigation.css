@@ -18,7 +18,36 @@ body{
 }
 a{
     color: #FEDC63;
-    padding: 5vh;
+    padding: 2vh;
+    font-size: 3vh;
+
     
 }
 
+@media only screen and (max-width: 600px) {
+    .navigation-style{
+       
+        width: 45vh;
+        height: 8vh;
+        display: flex;
+        padding: 0%;
+       
+    }
+    .navigation-style ul{
+        list-style: none;
+        justify-content: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        padding: 0%;
+    }
+    a{
+        
+        padding: 1vh;
+        font-size: 2.2vh;
+       
+            
+    }
+}
+ 

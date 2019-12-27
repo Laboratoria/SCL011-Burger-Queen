@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 2vh;
+  color: #430064;
 }
 
 code {
@@ -22,13 +24,47 @@ code {
 .divsHome h1{
   color: #430064;
 }
+
 .table-detail{
   width: 44vh;
   display: grid;
-  float: left;
-  border: solid #000
+  margin-top: 10vh;
+  
+}
+.table-detail>table{
+  margin-left: 2vh;
+  /* border: solid #4300645e */
+}
 
+.table-detail>table>tbody{
+  background-color: rgba(254, 220, 99, 0.589);
+}
+div.table-detail>table>tbody>tr>td>button{
+  color: #FEDC63;
+  stroke: cornsilk;
+  background-color: #430064;
+  
+}
+div.sendingkitchen>button{
+ 
+  width: 20vh;
+  height: 3vh;
+  margin-left: 24vh;
+  border-radius: 15px;
+  color: #FEDC63;
+  stroke: cornsilk;
+  background-color: #430064;
 }
 .holi{
 display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .table-detail{
+    width: 40vh;
+    margin-top: 8vh;
+     }
+     div.sendingkitchen>button{
+      margin-left: 20vh;
+     }
 }
