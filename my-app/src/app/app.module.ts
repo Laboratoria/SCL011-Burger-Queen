@@ -18,6 +18,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { MesasComponent } from './components/mesas/mesas.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { BurguerComponent } from './components/menu/burguer/burguer.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     MenuComponent,
     PedidosComponent,
     MesasComponent,
-    NavbarComponent,  
+    NavbarComponent,
+    BurguerComponent,  
   ],
     imports: [
     BrowserModule,

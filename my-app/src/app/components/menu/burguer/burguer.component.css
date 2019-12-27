@@ -1,0 +1,16 @@
+.container-menu-Almz {
+    display: flex;
+    flex-direction: column;
+}
+
+.btnn {
+    background-color: rgba(48, 48, 49, 0.1);
+    border-radius: 4px;
+    margin-top: 5px;
+    border: 0;
+    color: #303031;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}

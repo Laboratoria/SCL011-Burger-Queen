@@ -13,3 +13,24 @@ body {
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
 }
+
+.main-g {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btnsT {
+    background-color: rgba(48, 48, 49, 0.1);
+    border-radius: 4px;
+    color: #303031;
+    border: 3px solid #e7e7e7;
+    padding: 10px 100px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
