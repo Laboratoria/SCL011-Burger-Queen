@@ -29,9 +29,7 @@ export default class Breakfast extends Component {
                 <Table>
                     <thead>
                         <tr>
-                            <th>Nombre</th>
-                            <th>Editar</th>
-                            <th>Eliminar</th>
+                           -
                         </tr>
                     </thead>
                     <tbody>
@@ -39,7 +37,7 @@ export default class Breakfast extends Component {
                             <tr key={key}>
                                 <td>{item.data.name}</td>
                                 <td>{item.data.price}</td>
-                                <td><Button>Editar</Button></td>
+                                <td><Button>Agregar</Button></td>
                                 <td><Button>Eliminar</Button></td>
                             </tr>
 

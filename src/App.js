@@ -1,44 +1,32 @@
 import React from 'react';
 import './App.css';
-import Breakfast from './Component/breakfast';
-import Lunch from './Component/lunch';
 
-import Auth from './Auth';
+//import Breakfast from './data/breakfast';
+//import Lunch from './data/lunch';
+import Auth from './Component/Auth';
+import Nav from './Component/Navigation'
 import { useUser } from 'reactfire' ;
+
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App () {
 
     const user = useUser();
 
     return (
+      <BrowserRouter>
         <div className="App">
             { user && <p>Usuario:{user.email}</p> }
-            <Auth />   
-               <div>
-                <Breakfast />
-                <Lunch />
-              </div>
+            <Auth />
+            <Nav />
+            
         </div>
-    
+      </BrowserRouter>
     );
 }
   
-export default App;
-
-
-
-
-/*class App extends Component{
-  
-render(){
-  return(
-    <div>
-      <Menu/>
-    </div>
-  );
-  }
-}
 
 export default App;
-*/
+
+
 

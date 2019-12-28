@@ -29,9 +29,7 @@ export default class Lunch extends Component {
                 <Table>
                     <thead>
                         <tr>
-                            <th>Nombre</th>
-                            <th>Editar</th>
-                            <th>Eliminar</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
