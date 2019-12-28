@@ -3,6 +3,8 @@ import Logo from "../components/Logo";
 import recoverOrder from "../data/recoverOrder";
 import ListOrder from "../components/ListOrder";
 import db from "../../firebaseInit";
+import Clock from "../components/Clock";
+
 class Kitchen extends Component{
     constructor(){
         super()
@@ -50,6 +52,7 @@ class Kitchen extends Component{
         return(
             <div className="kitchen-container">
                 <Logo/>
+                <Clock/>
                 {orders}
             </div>
         )
