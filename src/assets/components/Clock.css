@@ -1,0 +1,9 @@
+.clock-container{
+    background-color: #430064;
+    width: fit-content;
+    display: flex;
+    float: right;
+}
+.clock-container h1{
+color: #FEDC63;
+}
