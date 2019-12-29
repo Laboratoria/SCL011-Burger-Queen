@@ -60,7 +60,7 @@ class Lunch extends Component{
     estados correspondientes (reacciona al cambio)*/
     handleChange=(e)=>{
       this.setState({
-        [e.name]:e.value
+        [e.id]:e.value
       })
     }
 
