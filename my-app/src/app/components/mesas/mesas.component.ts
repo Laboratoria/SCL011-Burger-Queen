@@ -10,7 +10,7 @@ import { WaiqueenService } from '../../services/waiqueen.service';
 })
 export class MesasComponent implements OnInit {
 
-  // Declarando variable donde se almacena resp del getTabls
+  // Declarando variable donde se almacena resp del getTabls para poder pintarla en la interfaz
   tables: TablsModel[] = [];
   
 

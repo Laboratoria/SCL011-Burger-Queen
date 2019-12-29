@@ -1,51 +1,8 @@
 <section class="container-menu-Almz">
-    <article>Hamburguesa
-        <p class="">Hamburguesa Simple
+    <article *ngFor="let item of menus">
+        <p class="">{{item.name}}
             <button class="btnn"><i class="fa fa-plus"></i></button>
             <button class="btnn"><i class="far fa-trash-alt"></i></button>
         </p>
-        <p class="">Hamburguesa Doble
-            <button class="btnn"><i class="fa fa-plus"></i></button>
-            <button class="btnn"><i class="far fa-trash-alt"></i></button>
-        </p>
+
     </article>
-    <article>Relleno
-        <p class="">Carne
-            <button class="btnn"><i class="fa fa-plus"></i></button>
-            <button class="btnn"><i class="far fa-trash-alt"></i></button>
-        </p>
-        <p class="">Pollo
-            <button class="btnn"><i class="fa fa-plus"></i></button>
-            <button class="btnn"><i class="far fa-trash-alt"></i></button>
-        </p>
-        <p class="">Vegana</p>
-    </article>
-    <article>Acompañamiento
-        <p>Papas fritas
-            <button class="btnn"><i class="fa fa-plus"></i></button>
-            <button class="btnn"><i class="far fa-trash-alt"></i></button>
-        </p>
-        <p>Aros de cebolla
-            <button class="btnn"><i class="fa fa-plus"></i></button>
-            <button class="btnn"><i class="far fa-trash-alt"></i></button>
-        </p>
-    </article>
-    <article>Bebidas
-        <p class="">Agua 500ml
-            <button class="btnn"><i class="fa fa-plus"></i></button>
-            <button class="btnn"><i class="far fa-trash-alt"></i></button>
-        </p>
-        <p class="">Agua 750ml
-            <button class="btnn"><i class="fa fa-plus"></i></button>
-            <button class="btnn"><i class="far fa-trash-alt"></i></button>
-        </p>
-        <p class="">Gaseosa 500 ml
-            <button class="btnn"><i class="fa fa-plus"></i></button>
-            <button class="btnn"><i class="far fa-trash-alt"></i></button>
-        </p>
-        <p class="">Gaseosa 700 ml
-            <button class="btnn"><i class="fa fa-plus"></i></button>
-            <button class="btnn"><i class="far fa-trash-alt"></i></button>
-        </p>
-    </article>
-</section>
