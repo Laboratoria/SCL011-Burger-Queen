@@ -11,7 +11,7 @@ import { WaiqueenService } from '../../services/waiqueen.service';
 export class MesasComponent implements OnInit {
 
   // Declarando variable donde se almacena resp del getTabls
-  tabls: TablsModel[] = [];
+  tables: TablsModel[] = [];
   
 
   //Inyecto mi servicio dentro del contructor para que la data cargue antes de la interfaz
@@ -22,9 +22,9 @@ export class MesasComponent implements OnInit {
     //Llamo el metodo getTabls creado en el services y me suscribo al evento
     this.waiqueenService.getTabls()
           .subscribe( resp =>{
-             this.tabls = resp
+             this.tables = resp
 
-          console.log(this.tabls);
+          console.log(this.tables);
             });
           
   }
