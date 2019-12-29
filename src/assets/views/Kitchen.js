@@ -14,14 +14,22 @@ class Kitchen extends Component{
             timeStamp:[]
         }
     }
-    /**Le decimos componentDidMount que al momento de cargar
-     la pagina, tiene que filtrar la data por pedidos pendientes
+    /**Le decimos componentDidMount que cada un segundo
+     debe ejecutar la función "update", la cúal a su vez
+    tiene que filtrar la data por pedidos pendientes
      y luego meterla dento del estado "request"
      */
     componentDidMount() {
+        clearInterval(this.timerID);
+        this.timerID = setInterval(
+          () => this.update(),
+          1000)
+      }
+      update(){
         recoverOrder("pendiente")
         .then(orders => this.setState({ request: orders }))
       }
+
       /**cada btn está asociado por el id, con su respectivo
        documento en firebase, por lo que al hacer click
        se cambiará el atributo "estado" a 'listo' */
