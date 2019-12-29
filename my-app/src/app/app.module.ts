@@ -1,7 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+//Modulos de firebase
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 //Modulo de peticiones http
 import { HttpClientModule } from '@angular/common/http'
 
@@ -36,6 +40,9 @@ import { BurguerComponent } from './components/menu/burguer/burguer.component';
     AppRoutingModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // Necesario para las funciones de base de datos
+    AngularFireAuthModule, // Necesario para las funciones de autentificacion
+    AngularFireStorageModule //Necesario para las funciones de almacenamiento
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   providers: [

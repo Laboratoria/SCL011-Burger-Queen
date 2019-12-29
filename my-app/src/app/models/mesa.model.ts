@@ -3,7 +3,7 @@
 export class TablsModel{
 
     id:string;
-    name:string;
-    tableNumber:number;
+    nametable:string;
+    numbertable:number;
 
 }

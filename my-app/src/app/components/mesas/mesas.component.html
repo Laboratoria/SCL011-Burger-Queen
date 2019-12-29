@@ -10,11 +10,11 @@
         </thead>
         <tbody>
 
-            <tr *ngFor="let table of tabls">
+            <tr *ngFor="let table of tables">
 
                 <th scope="row">
-                    <button (click)="getTable(table.tableNumber)" class="btntable" [routerLink]="['/menu']"> 
-                                {{table.name}}
+                    <button (click)="getTable(table.numbertable)" class="btntable" [routerLink]="['/menu']"> 
+                                {{table.nametable}}
                     </button>
                 </th>
 

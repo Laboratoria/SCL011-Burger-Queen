@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from "rxjs/operators";
+import { Observable } from 'rxjs';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { TablsModel } from '../models/mesa.model';
+
 
 
 
@@ -11,36 +14,25 @@ import { TablsModel } from '../models/mesa.model';
 
 export class WaiqueenService {
 
-  private url = "https://burguer-queen-7d0ee.firebaseio.com";
+//Declaro una variable para mi coleccion
+ private tablsCollection: AngularFirestoreCollection<TablsModel>
+ //Declaro mi variable para guardar el array de mesas
+ arrayTabls: Observable<TablsModel[]>;
 
-  //inyectando el servicio http
-  constructor( private http:HttpClient) { }
-
-  //Metodo para obtener lista de mesas
-  getTabls(){
-  return this.http.get(`${ this.url }/mesas.json`)
-  .pipe(
-    map( resp => this.createArray(resp))
-   
-  );
+   constructor(private afs: AngularFirestore) {
+     //Guardo la coleccion de mesas en la variable tablsCollection 
+    this.tablsCollection = afs.collection<TablsModel>('mesas');
+    //Guardo la coleccion en mi variable arrayTabls Y EVALUO LOS CAMBIOS
+      this.arrayTabls = this.tablsCollection.snapshotChanges().pipe(
+        map(actions => actions.map(a => {
+          const data = a.payload.doc.data() as TablsModel;
+          const id = a.payload.doc.id;
+          return { id, ...data };
+        }))
+      );
   }
 
-  //Metodo para convertir el objeto en array
-private createArray( tablsObje:object ){
-
-  const tabls: TablsModel[] = [];
-    if ( tablsObje === null ){return [];}
-
-    //uso el metodo keys de javascript
-  Object.keys(tablsObje).forEach( key => {
-
-    const table: TablsModel = tablsObje[key];
-    table.id = key;
-
-    tabls.push(table);
-  })
-
-  return tabls;
-
-}
+    getTabls(){
+      return this.arrayTabls;
+    }
 }
