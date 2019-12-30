@@ -61,7 +61,7 @@ class Breakfast extends Component {
     estados correspondientes (reacciona al cambio)*/
   handleChange = e => {
     this.setState({
-      [e.name]: e.value
+      [e.id]: e.value
     });
   };
 
@@ -138,3 +138,4 @@ class Breakfast extends Component {
   }
 }
 export default Breakfast;
+

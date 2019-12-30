@@ -8,29 +8,27 @@
 -  [2-Objetivos de la Aplicación](#objetivos-de-la-aplicacion)
 -  [3-Historias de Usuario](#Historias-de-Usuario)
 
--  [3-Metodología UX](#Metodología-UX)
+-  [4.-Entrevista](#Encuesta-online)
 
--  [2.-Entrevista](#Encuesta-online)
+-  [5-Prototipos](#prototipos)
 
--  [3-Prototipos](#prototipos)
+-  [5.1-Prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
 
--  [3.1-Prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
+-  [5.2-Prototipo de Alta Fidelidad](#prototipo-de-alta-fidelidad)
 
--  [3.2-Prototipo de Alta Fidelidad](#prototipo-de-alta-fidelidad)
+-  [6-Tests de usabilidad](#tests-de-usabilidad)
 
--  [4-Tests de usabilidad](#tests-de-usabilidad)
+-  [7-Guía de estilos](#Guia-de-estilos)
 
--  [5-Guía de estilos](#Guia-de-estilos)
+-  [8-Pruebas unitarias](#Pruebas-unitarias)
 
--  [6-Pruebas unitarias](#Pruebas-unitarias)
+-  [9-Futuras Mejoras](#futuras-mejoras)
 
--  [7-Futuras Mejoras](#futuras-mejoras)
+-  [10-Planificación](#Planificación)
 
--  [8-Planificación](#Planificación)
+-  [11-Herramientas](#Herramientas)
 
--  [9-Herramientas](#Herramientas)
-
--  [10-Checklist obligatorio](#checklist-obligatorio)
+-  [12-Checklist obligatorio](#checklist-obligatorio)
 
 
 
@@ -128,7 +126,33 @@ Hiciste tests de usabilidad e incorporaste el feedback del usuario.
 Desplegaste tu aplicación y has etiquetado tu versión (git tag).
 Los datos se deben mantener íntegros, incluso después de que un pedido ha terminado. Todo esto para poder tener estadísticas en el futuro.
 
+## Entrevista 
 
+Se realizo una entrevista a Jennifer Andrade, encargada de local de Tío Manolo, Florida.  Debido a la similitud del servicio que presta esta entidad con la de nuestra Aplicación Burguer-Queen.
+
+La entrevista se mezclo con técnicas de card sorting puesto que entre los elementos que queríamos definir se encontraban la arquitectura de la aplicación, la cual debía reflejar los requerimientos del potencial usuario de esta. El cual se define como la persona que entre sus responsabilidades esta atender a los clientes que acuden a su local.
+
+ [Audio](https://trello.com/c/MuwmXYfO/13-entrevista-ux)
+
+Resultados:
+
+! [Arquitectura] ("https://i.ibb.co/wsrNQQr/Arquitectura.jpg")
+
+Dentro de las observaciones, se destacan los siguientes puntos.
+
+-Debería contemplar por separado los ingredientes de un sándwich puesto que a veces los clientes quieren con o sin lechuga, tomate etc. Lo mismo ocurre con las papas y los aros de cebolla a veces piden con o sin sal.
+
+-Una vez realizado el pedido debería existir la opción de revisar y confirmar el pedido antes de ser enviado a la cocina
+
+-una vez terminado el pedido al final del detalle debería existir la opción de diferente formas de pago, ya que actualmente es muy poco el porcentaje de personas que pagan en efectivo. Por ende se debieran contemplar las siguientes opciones:
+
+-Efectivo
+
+-Debito
+
+-Crédito
+
+-Cheque Restorán
 
 ## Guia-de-estilos
 ![enter image description here](https://i.ibb.co/BcFy5XF/Paletade-Colores-Burguer-Queen.png)
@@ -136,7 +160,11 @@ Los datos se deben mantener íntegros, incluso después de que un pedido ha term
 ## Prototipo de alta fidelidad
 
 [Figma](https://www.figma.com/file/LELmcuygbOhs6mNGyhBRlG/BurguerQueen?node-id=0:1)
-
+![Inicio](https://i.ibb.co/n6qL0fx/1.png)
+![Menu](https://i.ibb.co/0rCLwHm/2.png)
+![Desayuno](https://i.ibb.co/4tNT9Nx/3.png)
+![Almuerzo](https://i.ibb.co/ngj8VH0/4.png)
+![Cocina](https://i.ibb.co/qBTCrRW/5.png)
 
 ## Planificación
 [Trello](https://trello.com/b/qVVNX6pC/burguer-queen)
@@ -151,10 +179,10 @@ Los datos se deben mantener íntegros, incluso después de que un pedido ha term
 - [x] Revisa y actualiza planificación a medida que se desarrolla el proyecto		
 - [x] Realiza historias de usuario		
 - [x] Prioriza el desarrollo en cuanto a historias de usuario		
-- [ ] Realiza entrevistas a usuari@s de la aplicación		
-- [ ] Itera la planificación/historias de usuario en base al resultado de las entrevistas		
-- [ ] Realiza testeo de usabilidad de la aplicación		
-- [ ] Itera en base al testeo de usabilidad de la app	
+- [x] Realiza entrevistas a usuari@s de la aplicación		
+- [x] Itera la planificación/historias de usuario en base al resultado de las entrevistas		
+- [] Realiza testeo de usabilidad de la aplicación		
+- [] Itera en base al testeo de usabilidad de la app	
 
 
 **Interfaz**
@@ -165,29 +193,29 @@ Los datos se deben mantener íntegros, incluso después de que un pedido ha term
 
 **Lógica **
 
- - [x] Utiliza reglas de ESlint (ES6+) para su framework
+- [x] Utiliza reglas de ESlint (ES6+) para su framework
 
 ** Es Single Page App**
 
- - [x] Usa funciones pequeñas con una sola responsabilidad
- - [x] Divide su código en módulos (componentes)
+- [x] Usa funciones pequeñas con una sola responsabilidad
+- [x] Divide su código en módulos (componentes)
 - [x] Mantiene la interfaz y el estado de la app sincronizados
 - [x] React: Trabaja con estados; Angular: Trabaja con servicios (observables)
-- [ ] Comenta el código y no hay código muerto
+- [x] Comenta el código y no hay código muerto
 - [x] Son los nombres de variables y funciones claros, descriptivos y en inglés
 
 **Base de datos y despliegue **
 
 - [ ] Autentica usuari@s
-- [ ] Guarda información
-- [ ] Lee información
+- [x] Guarda información
+- [x] Lee información
 - [x] Guarda archivos, como imagenes, en Firebase Storage u otro servicio de almacenamiento
 - [x] La app está desplegada y se puede acceder desde cualquier dispositivo
 
 ** Progressive Web App **
 
 - [ ] Funciona offline
-- [ ] Utiliza Lighthouse para auditar la app
+- [x] Utiliza Lighthouse para auditar la app
 
 ** Testing **
 

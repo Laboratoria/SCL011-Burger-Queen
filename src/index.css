@@ -24,6 +24,7 @@ code {
 .divsHome h1{
   color: #430064;
 }
+
 .table-detail{
   width: 44vh;
   display: grid;
@@ -57,6 +58,7 @@ div.sendingkitchen>button{
 .holi{
 display: flex;
 }
+
 @media only screen and (max-width: 600px) {
   .table-detail{
     width: 40vh;
