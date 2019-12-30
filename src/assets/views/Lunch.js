@@ -121,6 +121,7 @@ class Lunch extends Component{
                 <div className="sendingkitchen">
                 <button  onClick={()=>this.sendKitchen()}>Enviar</button>
                </div>
+
                </div>
 
                <div className="nav-btn">
