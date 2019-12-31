@@ -1,0 +1,15 @@
+div.clock-container {
+ 
+  display: flex;
+
+
+}
+.clock-container h1 {
+ 
+  color: #fedc63;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 36vh;
+  background-color: #430064;
+}

@@ -1,19 +1,20 @@
 import React, { Component } from "react";
-//import "./Inputclient.css";
-import PropType from 'prop-types';
+import "./Inputclient.css";
 
 class Inputclient extends Component {
   render() {
     return <div className="input-container">
-    <label >Cliente </label>
-    <input type="text" /> {this.props.client}
-
+  <div>
+    <label from="client" >Cliente </label>
+    <input type="text" id="client" onChange={this.props.change}/> 
+  </div>
+  <div> 
+   <label from="table">N° de Mesa </label>
+   <input type="number" id="table"  onChange={this.props.change}/> 
+    </div>
+    
     </div>
   }
-}
-Inputclient.PropType={
-  client:PropType.string
-  
 }
 
 export default Inputclient;

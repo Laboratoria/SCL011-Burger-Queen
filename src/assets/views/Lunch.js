@@ -12,6 +12,8 @@ class Lunch extends Component{
         super(props)
         this.state={
             products: products.Lunch,
+            client: "",
+            table: "",
             orders: [],
             price: 0
         }
@@ -53,15 +55,28 @@ class Lunch extends Component{
           price: newTotal
         });
       }
+
+      /*Toma los valores de los imputs y los guarda en los 
+    estados correspondientes (reacciona al cambio)*/
+    handleChange=(e)=>{
+      this.setState({
+        [e.id]:e.value
+      })
+    }
+
       sendKitchen=()=>{
     /* Al finalizar el pedido lo enviamos a la base de datos
     para luego ser enviado a cocina */
+    let init = new Date ()
+    let timeInit = init.getHours() + ":" + init.getMinutes();   
         db.collection("orders").add({
-          mesa: "",
-          cliente: "",
+          mesa: this.state.table,
+          cliente: this.state.client,
           estado: "pendiente",
           orden: this.state.orders,
           total: this.state.price,
+          inicio: timeInit,
+          termino: ""
       })
           .then(function (docRef) {
               console.log("Document successfully written!", docRef.id);
@@ -75,12 +90,13 @@ class Lunch extends Component{
     render(){
         
         return(
-           <div className="holi">
+           <div className="container-universal">
                
                <div className="logo-detail">
                <Logo/>
                {/* aquí se va imprimiendo el detalle según se 
                hace el pedido*/}
+                <Inputclient change={(e)=> this.handleChange(e.target)}/>
                <div className="table-detail">
                 <table>
                  <thead>
@@ -94,7 +110,7 @@ class Lunch extends Component{
                  <tr key ={index}>
                 <td>{e.product}</td>
                 <td>{e.price}</td>
-                <td><button onClick={() =>this.removeItem(index, e)}>Delete</button></td>
+                <td><button onClick={() =>this.removeItem(index, e)}>Borrar</button></td>
                 </tr>
                  )}
                  </tbody>
@@ -106,8 +122,9 @@ class Lunch extends Component{
                 </tfoot>
                </table>
                 </div>
-                <button onClick={()=>this.sendKitchen()}>Enviar a Cocina</button>
-                 <Inputclient/>
+                <div className="sendingkitchen">
+                <button  onClick={()=>this.sendKitchen()}>Enviar</button>
+               </div>
                </div>
 
                <div className="nav-btn">

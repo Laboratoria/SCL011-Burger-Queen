@@ -1,14 +1,13 @@
-// Este código opcional se utiliza para registrar un trabajador de servicio.
-// el registro () no se llama por defecto.
+// This optional code is used to register a service worker.
+// register() is not called by default.
 
-// Esto permite que la aplicación se cargue más rápido en visitas posteriores en producción y da
-// es capacidades fuera de línea. Sin embargo, también significa que los desarrolladores (y usuarios)
+// This lets the app load faster on subsequent visits in production, and gives
+// it offline capabilities. However, it also means that developers (and users)
+// will only see deployed updates on subsequent visits to a page, after all the
+// existing tabs open on the page have been closed, since previously cached
+// resources are updated in the background.
 
-// solo verá actualizaciones implementadas en visitas posteriores a una página, después de todo
-// las pestañas existentes abiertas en la página se han cerrado, ya que se almacenaron previamente
-// los recursos se actualizan en segundo plano.
-
-// Para obtener más información sobre los beneficios de este modelo y las instrucciones sobre cómo
+// To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
 
 const isLocalhost = Boolean(
@@ -67,9 +66,9 @@ function registerValidSW(swUrl, config) {
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
-            // En este punto, el contenido precached actualizado se ha recuperado,
-               // pero el trabajador de servicio anterior seguirá sirviendo a los mayores
-               // contenido hasta que todas las pestañas del cliente estén cerradas.
+              // At this point, the updated precached content has been fetched,
+              // but the previous service worker will still serve the older
+              // content until all client tabs are closed.
               console.log(
                 'New content is available and will be used when all ' +
                   'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
@@ -132,7 +131,7 @@ function checkValidServiceWorker(swUrl, config) {
 export function unregister() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then(registration => {
-      registration.unregister();
+      registration.register();
     });
   }
 }
