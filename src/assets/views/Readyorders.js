@@ -83,7 +83,7 @@ class Readyorders extends Component {
                 <tr>
                   <td>N° de mesa</td>
                   <td>Cliente</td>
-                  <td>Inicio</td>
+                  <td>Total</td>
                   <td>Termino</td>
                 </tr>
               </thead>
@@ -93,6 +93,7 @@ class Readyorders extends Component {
                   <tr key={index}>
                     <td>{x.mesa}</td>
                     <td>{x.cliente}</td>
+                    <td>{x.total}</td>
                     <td>{x.termino}</td>
                   </tr>
                 ))}
