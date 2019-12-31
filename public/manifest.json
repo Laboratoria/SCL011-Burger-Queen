@@ -7,6 +7,7 @@
   "orientation":"landscape",
   "display": "standalone",
   "start_url": ".",
+  "start_url": "https://burger-queen-2dc5a.firebaseapp.com",
   "scope": "./",
   "lang": "es",
   "icons": [
