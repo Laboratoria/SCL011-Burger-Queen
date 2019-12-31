@@ -2,32 +2,15 @@ import React, {Component} from 'react';
 import './Menu.css'
 
 class Menu extends Component{
-  constructor(){
-    super()
-    this.state ={
-      orders: [],
-            product: "",
-            price: ""
-  
-    }
-
-    this.clickItem = this.clickItem.bind(this)
-  }
-
-clickItem(){
-  const itemName= this.props.product;
-  const itemPrice= this.props.price;
-  console.log(itemName, itemPrice);
-
-}
     
     render(){
         return  <div className="button-container">
-            <button  onClick={this.clickItem}>
-              <img  src={this.props.img} alt="icon"/>
+            <button 
+             onClick={this.props.clickItem.bind(this, this.props.infoproduct)}>
+              <img  src={this.props.infoproduct.img} alt="icon"/>
               <div>
-                <h6>{this.props.product}</h6>
-                <p>{this.props.price}</p>
+                <h6>{this.props.infoproduct.product}</h6>
+                <p>{this.props.infoproduct.price}</p>
               </div>
             </button>
         </div>
