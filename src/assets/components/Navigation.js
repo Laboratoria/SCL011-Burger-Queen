@@ -13,10 +13,7 @@ const Navigation = props => {
             <Link to="/Lunch">Almuerzos</Link>
           </li>
           <li>
-            <Link to="/listos">Pedidos Listos</Link>
-          </li>
-          <li>
-            <Link to="/pay">Pagados</Link>
+            <Link to="/Readyorders">Pedidos Listos</Link>
           </li>
         </ul>
       </nav>
