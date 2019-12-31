@@ -24,29 +24,28 @@ code {
 .divsHome h1{
   color: #430064;
 }
-
 .table-detail{
   width: 44vh;
   display: grid;
-  margin-top: 10vh;
-  
+  margin-top: 4.5vh;  
 }
 .table-detail>table{
   margin-left: 2vh;
-  /* border: solid #4300645e */
 }
 
 .table-detail>table>tbody{
-  background-color: rgba(254, 220, 99, 0.589);
+  background-color: rgba(254, 220, 99, 0.589);  
+}
+
+div.table-detail>table>thead>tr>td{
+ font-weight: bold;
 }
 div.table-detail>table>tbody>tr>td>button{
   color: #FEDC63;
   stroke: cornsilk;
   background-color: #430064;
-  
 }
 div.sendingkitchen>button{
- 
   width: 20vh;
   height: 3vh;
   margin-left: 24vh;
@@ -55,9 +54,65 @@ div.sendingkitchen>button{
   stroke: cornsilk;
   background-color: #430064;
 }
-.holi{
+
+.container-universal{
 display: flex;
 }
+div.kitchenOrder-container{
+  border-color: #FEDC63;
+  border-style: ridge;
+  margin: 1vh;
+  width: 30vh;
+  
+}
+div.kitchenOrder-container>div>h5{
+  font-weight: bolder;
+  padding: 0vh;
+  font-size: 2vh;
+  margin: 0.5vh;
+}
+div.kitchenOrder-container>button{
+  width: 20vh;
+  height: 3vh;
+ 
+  border-radius: 15px;
+  color: #FEDC63;
+  stroke: cornsilk;
+  background-color: #430064;
+  text-align: center;
+  align-items: center;
+}
+
+div.headkitchen{
+ /* background-color: #FEDC63; */
+ width: 550px;
+
+;
+}
+ div.headkitchen>div{
+ 
+  align-content: center;
+  text-align: center;
+
+}
+div.headkitchen>span{
+font-weight: bolder;
+width: 50%;
+height:100px;
+}  
+div.headkitchen>span>h3{
+  font-size: 4vh;
+  margin-bottom: 2vh;
+  padding: 0vh;
+  margin-left: 14vh;
+  margin-top: 0vh;
+}
+div.board{
+   /* border: ridge;  */
+ align-content: center;
+ margin-left: 8vh;
+}
+
 
 @media only screen and (max-width: 600px) {
   .table-detail{

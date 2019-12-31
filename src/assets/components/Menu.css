@@ -1,5 +1,5 @@
 .button-container {
-  grid-gap:  5px;
+ grid-gap:  5px;
   display: grid;
   grid-template-columns: auto auto;
   float: left;
@@ -19,7 +19,6 @@
 .button-container>div> h6:active{
   color: #FEDC63;
 }
-
 .button-container>button{
     background-color: #ffffff;
     border-radius: 12px;

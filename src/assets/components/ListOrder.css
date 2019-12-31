@@ -1,0 +1,12 @@
+
+table.Command>thead>tr>td{
+align-items: center;
+text-align: center;
+font-weight: bold;
+background-color: #FEDC63;
+width: 30vh;
+
+}
+table.Command>tbody>tr>td{
+    background-color: rgba(44, 1, 65, 0.089); 
+}
