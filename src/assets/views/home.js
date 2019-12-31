@@ -1,3 +1,4 @@
+  
 import React, { Component } from 'react'
 import '../../index.css'
 import Logo from '../components/Logo'
@@ -13,7 +14,7 @@ render(){
             
             </div>
             <div className="divsHome">
-            <Link to="/cocina"><h1>Cocina</h1></Link>
+            <Link to="/Kitchen"><h1>Cocina</h1></Link>
             </div>
             </div>
     )

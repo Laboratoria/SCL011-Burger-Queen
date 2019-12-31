@@ -1,33 +1,145 @@
-import React, { Component } from 'react'
-import Menu from '../components/Menu'
-import products from  '../data/products.json'
-import Logo from '../components/Logo'
-import Navigation from '../components/Navigation'
+import React, { Component } from "react";
+import Menu from "../components/Menu";
+import products from "../data/products.json";
+import Logo from "../components/Logo";
+import Navigation from "../components/Navigation";
+import Inputclient from "../components/Inputclient";
+import "../../index.css";
+import db from "../../firebaseInit";
 
-class Breakfast extends Component{
-    constructor(){
-        super()
-        this.state={
-            products: products,
-        }
-    }
-    render(){
-        console.log(this.state.products.Lunchs)
-        return(
-           <div>
-               <Logo/>
-               <Navigation/>
+//se crea la vista que mostrará el menú del desayuno
+class Breakfast extends Component {
+  //se le asignan estados
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: products.Breakfast,
+      client: "",
+      table: "",
+      orders: [],
+      price: 0
+    };
+  }
+  /* clickItem recupera los datos de cada producto y los guarda
+    en los estados correspondientes.*/
+  clickItem = e => {
+    /* la variable a continuación contiene el estado "orders" el cúal es un array.
+   Por lo que le empujamos dentro un objeto que tendrá el nombre y el precio
+   del producto*/
+    let products = this.state.orders;
+    products.push({
+      product: e.product,
+      price: e.price
+    });
+    /* se recupera el estado "price" que al comienzo vale 0 y se le suman los 
+    precios de los pedidos para obtener el total del pedido*/
+    let currentTotal = this.state.price;
+    let sumTotal = e.price;
+    let newTotal = currentTotal + sumTotal;
+    this.setState({
+      price: newTotal
+    });
+  };
+  // elimina los productos del estado "orders" y por tanto, del detalle.
+  removeItem = (index, e) => {
+    let itemDelete = this.state.orders;
+    // se elimina el item asociado al btn
+    this.setState({
+      orders: itemDelete.filter((itemDelete, i) => {
+        return i !== index;
+      })
+    });
+    /* Al eliminarse el item, debemos restarlo del total*/
+    let currentTotal = this.state.price;
+    let minusTotal = e.price;
+    let newTotal = currentTotal - minusTotal;
+    this.setState({
+      price: newTotal
+    });
+  };
+  /*Toma los valores de los imputs y los guarda en los 
+    estados correspondientes (reacciona al cambio)*/
+  handleChange = e => {
+    this.setState({
+      [e.id]: e.value
+    });
+  };
 
-                {this.state.products.Breakfast.map(e=>
-                <Menu 
-                key = {e.id}
-                price = {e.price}
-                product = {e.product}
-                img = {e.img}/>
-                )}
-           </div>
-           
-        )
-    }
+  sendKitchen = () => {
+    /* Al finalizar el pedido lo enviamos a la base de datos
+    para luego ser enviado a cocina */
+    let init = new Date ()
+    let timeInit = init.getHours() + ":" + init.getMinutes(); 
+    db.collection("orders")
+      .add({
+        mesa: this.state.table,
+        cliente: this.state.client,
+        estado: "pendiente",
+        orden: this.state.orders,
+        total: this.state.price,
+        inicio: timeInit,
+        termino: ""
+      })
+      .then(function(docRef) {
+        console.log("Document successfully written!", docRef.id);
+      })
+      .catch(function(error) {
+        console.error("Error writing document: ", error);
+      });
+  };
+  render() {
+    return (
+      <div className="container-universal">
+        <div className="logo-detail">
+          <Logo />
+          <Inputclient change={e => this.handleChange(e.target)} />
+          {/* aquí se va imprimiendo el detalle según se 
+               hace el pedido*/}
+          <div className="table-detail">
+            <table>
+              <thead>
+                <tr>
+                  <td>Producto</td>
+                  <td>Precio</td>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.orders.map((e, index) => (
+                  <tr key={index}>
+                    <td>{e.product}</td>
+                    <td>{e.price}</td>
+                    <td>
+                      <button  onClick={() => this.removeItem(index, e)}>
+                      Borrar
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total:</td>
+                  <td>${this.state.price}</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+         <div className="sendingkitchen">
+         <button  onClick={() => this.sendKitchen()}>Enviar</button>
+         </div>
+        </div>
+
+        <div className="nav-btn">
+          <Navigation />
+
+          {this.state.products.map(e => (
+            <Menu clickItem={this.clickItem} key={e.id} infoproduct={e} />
+          ))}
+        </div>
+      </div>
+    );
+  }
 }
-export default Breakfast
+export default Breakfast;
+
