@@ -67,12 +67,16 @@ class Lunch extends Component{
       sendKitchen=()=>{
     /* Al finalizar el pedido lo enviamos a la base de datos
     para luego ser enviado a cocina */
+    let init = new Date ()
+    let timeInit = init.getHours() + ":" + init.getMinutes();   
         db.collection("orders").add({
           mesa: this.state.table,
           cliente: this.state.client,
           estado: "pendiente",
           orden: this.state.orders,
           total: this.state.price,
+          inicio: timeInit,
+          termino: ""
       })
           .then(function (docRef) {
               console.log("Document successfully written!", docRef.id);
@@ -86,7 +90,7 @@ class Lunch extends Component{
     render(){
         
         return(
-           <div className="holi">
+           <div className="container-universal">
                
                <div className="logo-detail">
                <Logo/>
