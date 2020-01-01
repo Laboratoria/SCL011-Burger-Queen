@@ -142,4 +142,3 @@ class Breakfast extends Component {
   }
 }
 export default Breakfast;
-

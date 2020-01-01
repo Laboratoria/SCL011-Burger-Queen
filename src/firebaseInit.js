@@ -1,5 +1,4 @@
 import * as firebase from 'firebase';
-
 firebase.initializeApp({
     apiKey: "AIzaSyBLB_FnAs4sVc_FLtGjaE-lppa6THOyATw",
     authDomain: "burger-queen-2dc5a.firebaseapp.com",

@@ -9,6 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 .navigation-style ul{
     list-style: none;

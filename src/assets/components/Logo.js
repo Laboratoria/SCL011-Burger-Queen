@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import logo from '../img/logo.png'
 import './Logo.css'

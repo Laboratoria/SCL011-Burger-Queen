@@ -27,14 +27,16 @@ code {
 .table-detail{
   width: 44vh;
   display: grid;
-  margin-top: 4.5vh;  
-}
+  margin-top: 4.5vh;
+  }
 .table-detail>table{
   margin-left: 2vh;
+  margin-top: 1vh;
+  
 }
 
 .table-detail>table>tbody{
-  background-color: rgba(254, 220, 99, 0.589);  
+  background-color: rgba(254, 220, 99, 0.589);
 }
 
 div.table-detail>table>thead>tr>td{
@@ -54,7 +56,6 @@ div.sendingkitchen>button{
   stroke: cornsilk;
   background-color: #430064;
 }
-
 .container-universal{
 display: flex;
 }
@@ -62,8 +63,7 @@ div.kitchenOrder-container{
   border-color: #FEDC63;
   border-style: ridge;
   margin: 1vh;
-  width: 30vh;
-  
+  width: 25vh;
 }
 div.kitchenOrder-container>div>h5{
   font-weight: bolder;
@@ -104,15 +104,39 @@ div.headkitchen>span>h3{
   font-size: 4vh;
   margin-bottom: 2vh;
   padding: 0vh;
-  margin-left: 14vh;
+  margin-left: 16vh;
   margin-top: 0vh;
 }
 div.board{
    /* border: ridge;  */
  align-content: center;
- margin-left: 8vh;
+ margin-left:0.5vh;
+ display: grid;
+ grid-template-columns: auto auto;
+ 
 }
-
+div.ServerToOrder-container>button{
+  width: 20vh;
+  height: 3vh;
+ 
+  border-radius: 15px;
+  color: #FEDC63;
+  stroke: cornsilk;
+  background-color: #430064;
+  text-align: center;
+  align-items: center;
+}
+div.oclockorder{
+ 
+ position: absolute;
+ margin-left: 0vh;
+ transform: translate(810px,-70px); 
+}
+div.boardorders{
+  margin-top:15vh;
+  display: grid;
+  grid-template-columns: auto auto;
+}
 
 @media only screen and (max-width: 600px) {
   .table-detail{

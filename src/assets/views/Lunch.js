@@ -90,7 +90,7 @@ class Lunch extends Component{
     render(){
         
         return(
-           <div className="container-universal">               
+           <div className="container-universal">
                <div className="logo-detail">
                <Logo/>
                {/* aquí se va imprimiendo el detalle según se 
@@ -124,7 +124,6 @@ class Lunch extends Component{
                 <div className="sendingkitchen">
                 <button  onClick={()=>this.sendKitchen()}>Enviar</button>
                </div>
-
                </div>
 
                <div className="nav-btn">

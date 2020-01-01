@@ -112,7 +112,6 @@ Hiciste tests de usabilidad e incorporaste el feedback del usuario.
 Desplegaste tu aplicación y has etiquetado tu versión (git tag).
 Los datos se deben mantener íntegros, incluso después de que un pedido ha terminado. Todo esto para poder tener estadísticas en el futuro.
 
-
 ## Flujo
 
 ![Flujo](https://raw.githubusercontent.com/mariaPazBeltran/SCL011-Burger-Queen/master/src/assets/img/flujo.PNG)
@@ -128,7 +127,6 @@ La entrevista se mezclo con técnicas de card sorting puesto que entre los eleme
 Resultados:
 
 ! [Arquitectura]("https://i.ibb.co/wsrNQQr/Arquitectura.jpg")
-
 
 Dentro de las observaciones, se destacan los siguientes puntos.
 
@@ -164,7 +162,6 @@ Dentro de las observaciones, se destacan los siguientes puntos.
 [Trello](https://trello.com/b/qVVNX6pC/burguer-queen)
 
 [Github](https://github.com/NataliaSaavedraM/SCL011-Burger-Queen/projects/1)
-
 
 ## checklist obligatorio
 
@@ -224,4 +221,3 @@ Dentro de las observaciones, se destacan los siguientes puntos.
 - [x] Hay pull requests con intención clara, una característica en particular para cada uno
 - [x] Usa tags en su repositorio
 - [x] Usa issues para reportar bugs o cosas por hacer
-

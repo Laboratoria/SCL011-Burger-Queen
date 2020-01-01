@@ -1,4 +1,3 @@
-  
 import React, { Component } from 'react'
 import '../../index.css'
 import Logo from '../components/Logo'
