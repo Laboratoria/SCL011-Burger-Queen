@@ -78,7 +78,9 @@ class Readyorders extends Component {
           <Logo />
 
           <div className="table-detail">
+          <div className="oclockorder">  <Clock /></div>
             <table>
+            <caption>Pedidos Entregados</caption>
               <thead>
                 <tr>
                   <td>N° de mesa</td>
@@ -99,6 +101,7 @@ class Readyorders extends Component {
                 ))}
               </tbody>
             </table>
+          
           </div>
         </div>
 
@@ -107,12 +110,13 @@ class Readyorders extends Component {
           <div><Navigation/> </div>
             {" "}
           
-            <span>
-              <h3>Pedidos Listos</h3>{" "}
-            </span> <Clock />
+            
           </div>
 
-          <div className="board"> {orders}</div>
+          <div className="boardorders"> <div><span>
+              <h3>Pedidos Listos</h3>{" "}
+            </span></div>  {orders}</div>
+        
         </div>
       </div>
     );

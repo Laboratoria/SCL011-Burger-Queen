@@ -120,8 +120,26 @@ div.board{
  grid-template-columns: auto auto;
  
 }
-
-
+div.ServerToOrder-container>button{
+  width: 20vh;
+  height: 3vh;
+ 
+  border-radius: 15px;
+  color: #FEDC63;
+  stroke: cornsilk;
+  background-color: #430064;
+  text-align: center;
+  align-items: center;
+}
+div.oclockorder{
+ 
+ position: absolute;
+ margin-left: 0vh;
+ transform: translate(810px,-70px); 
+}
+div.boardorders{
+  margin-top:15vh;
+}
 @media only screen and (max-width: 600px) {
   .table-detail{
     width: 40vh;
