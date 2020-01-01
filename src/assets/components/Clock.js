@@ -15,7 +15,7 @@ class Clock extends Component {
         clearInterval(this.timerID);
         this.timerID = setInterval(
           () => this.tick(),
-          120000
+          1000
         );
       }
       tick() {

@@ -9,7 +9,6 @@ import {BrowserRouter as Router,
 import Kitchen from './assets/views/Kitchen';
 import Readyorders from './assets/views/Readyorders';
 
-
 function App() {
   return (
     <Router>
@@ -17,8 +16,7 @@ function App() {
         <Route path="/Lunch" component={ Lunch } />
         <Route path="/Breakfast" component={ Breakfast } />
         <Route path="/Kitchen" component={ Kitchen } />
-        <Route path="/Readyorders" component={ Readyorders } />
-      
+        <Route path="/Readyorders" component={ Readyorders } />      
     </Router>
   );
 }
