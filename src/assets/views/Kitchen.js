@@ -24,7 +24,7 @@ class Kitchen extends Component{
         clearInterval(this.timerID);
         this.timerID = setInterval(
           () => this.update(),
-          120000)
+          60000)
       }
       update(){
         recoverOrder("pendiente")
@@ -55,7 +55,7 @@ class Kitchen extends Component{
             mark.push(data);
         })
 
-        this.componentDidMount()
+        this.update()
             
         }) 
       }
