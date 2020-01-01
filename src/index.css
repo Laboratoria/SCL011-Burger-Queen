@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 2vh;
+  color: #430064;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.divsHome{
+  display: flex;
+    height: 40vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.divsHome h1{
+  color: #430064;
+}
+.table-detail{
+  width: 44vh;
+  display: grid;
+  margin-top: 4.5vh;
+  }
+.table-detail>table{
+  margin-left: 2vh;
+  margin-top: 1vh;
+  
+}
+
+.table-detail>table>tbody{
+  background-color: rgba(254, 220, 99, 0.589);
+}
+
+div.table-detail>table>thead>tr>td{
+ font-weight: bold;
+}
+div.table-detail>table>tbody>tr>td>button{
+  color: #FEDC63;
+  stroke: cornsilk;
+  background-color: #430064;
+}
+div.sendingkitchen>button{
+  width: 20vh;
+  height: 3vh;
+  margin-left: 24vh;
+  border-radius: 15px;
+  color: #FEDC63;
+  stroke: cornsilk;
+  background-color: #430064;
+}
+.container-universal{
+display: flex;
+}
+div.kitchenOrder-container{
+  border-color: #FEDC63;
+  border-style: ridge;
+  margin: 1vh;
+  width: 25vh;
+}
+div.kitchenOrder-container>div>h5{
+  font-weight: bolder;
+  padding: 0vh;
+  font-size: 2vh;
+  margin: 0.5vh;
+}
+div.kitchenOrder-container>button{
+  width: 20vh;
+  height: 3vh;
+ 
+  border-radius: 15px;
+  color: #FEDC63;
+  stroke: cornsilk;
+  background-color: #430064;
+  text-align: center;
+  align-items: center;
+}
+
+div.headkitchen{
+ /* background-color: #FEDC63; */
+ width: 550px;
+
+;
+}
+ div.headkitchen>div{
+ 
+  align-content: center;
+  text-align: center;
+
+}
+div.headkitchen>span{
+font-weight: bolder;
+width: 50%;
+height:100px;
+}  
+div.headkitchen>span>h3{
+  font-size: 4vh;
+  margin-bottom: 2vh;
+  padding: 0vh;
+  margin-left: 16vh;
+  margin-top: 0vh;
+}
+div.board{
+   /* border: ridge;  */
+ align-content: center;
+ margin-left:0.5vh;
+ display: grid;
+ grid-template-columns: auto auto;
+ 
+}
+div.ServerToOrder-container>button{
+  width: 20vh;
+  height: 3vh;
+ 
+  border-radius: 15px;
+  color: #FEDC63;
+  stroke: cornsilk;
+  background-color: #430064;
+  text-align: center;
+  align-items: center;
+}
+div.oclockorder{
+ 
+ position: absolute;
+ margin-left: 0vh;
+ transform: translate(810px,-70px); 
+}
+div.boardorders{
+  margin-top:15vh;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .table-detail{
+    width: 40vh;
+    margin-top: 8vh;
+     }
+     div.sendingkitchen>button{
+      margin-left: 20vh;
+     }
+}
