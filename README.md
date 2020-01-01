@@ -1,416 +1,223 @@
-# Burger Queen
+![enter image description here](https://i.ibb.co/CnQMK42/Logo.png)
 
-## Índice
+Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Pistas, tips y lecturas complementarias](#6-pistas-tips-y-lecturas-complementarias)
+## **Índice**
 
-***
+- [1- Resumen del proyecto](#Resumen-del-proyecto)
+- [2-Objetivos de la Aplicación](#objetivos-de-la-aplicacion)
+- [3-Historias de Usuario](#Historias-de-Usuario)
+- [4-Flujo](#Flujo)
+- [5-Entrevista](#Encuesta-online)
+- [6-Prototipos](#prototipos)
+- [6.1-Prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
+- [6.2-Prototipo de Alta Fidelidad](#prototipo-de-alta-fidelidad)
+- [7-Tests de usabilidad](#tests-de-usabilidad)
+- [8-Guía de estilos](#Guia-de-estilos)
+- [9-Pruebas unitarias](#Pruebas-unitarias)
+- [10-Futuras Mejoras](#futuras-mejoras)
+- [11-Planificación](#Planificación)
+- [12-Herramientas](#Herramientas)
+- [13-Checklist obligatorio](#checklist-obligatorio)
 
-## 1. Preámbulo
+1. Resumen del proyecto
+   Esta vez tenemos un proyecto 100% por encargo. Si bien siempre puedes (y debes) hacer sugerencias de mejoras y/o cambios, muchas veces trabajarás en proyectos en los que primero hay que asegurarse de cumplir con lo requerido.
 
-[React](https://es.reactjs.org/) y [Angular](https://angular.io/) 
-son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
-lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
-En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
-es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
-Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una
-serie de convenciones e implementaciones _probadas_ y _documentadas_ para
-resolver un problema común a toda interfaz web. Esto nos permite concentrarnos
-mejor (dedicar más tiempo) en las caractrísticas _específicas_ de
-nuestra aplicación.
+Un pequeño restaurante de hamburguesas, que está creciendo, necesita una interfaz en la que puedan tomar pedidos usando una tablet, y enviarlos a la cocina para que se preparen ordenada y eficientemente (a través de un backend del que nos darán detalles más adelante).
 
-Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
-código para reusarlo (lo cuál es un gran valor per se), si no que adoptamos una
-**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
-**abstracciones**, un **vocabulario**, una **comunidad**, etc...
-
-Como desarrolladora Front-end, estos kits de desarrollo pueden resultarte
-de gran ayuda para implementar rápidamente características de los proyectos en
-los que trabajes.
-
-## 2. Resumen del proyecto
-
-Esta vez tenemos un proyecto 100% por encargo. Si bien siempre puedes (y debes)
-hacer sugerencias de mejoras y/o cambios, muchas veces trabajarás en proyectos
-en los que primero hay que asegurarse de cumplir con lo requerido.
-
-Un pequeño restaurante de hamburguesas, que está creciendo, necesita una
-interfaz en la que puedan tomar pedidos usando una _tablet_, y enviarlos
-a la cocina para que se preparen ordenada y eficientemente (a través de un
-  _backend_ del que nos darán detalles más adelante).
-
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
+burger-queen
 
 Esta es la información que tenemos del cliente:
 
-> Somos **Burguer Queen**, una cadena de comida 24hrs.
->
-> Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida y, para
-> seguir creciendo, necesitamos un sistema que nos ayude a tomar los pedidos de
-> nuestros clientes.
->
-> Tenemos 2 menús: uno muy sencillo para el desayuno:
->
-> | Ítem                      |Precio $|
-> |---------------------------|------|
-> | Café americano            |    500 |
-> | Café con leche            |    700 |
-> | Sandwich de jamón y queso |   1000 |
-> | Jugo de frutas natural              |    700 |
->
-> Y otro menú para el resto del día:
->
-> | Ítem                      |Precio|
-> |---------------------------|------|
-> |**Hamburguesas**           |   **$**   |
-> |Hamburguesa simple         |    1000|
-> |Hamburguesa doble          |    1500|
-> |**Acompañamientos**        |   **$**   |
-> |Papas fritas               |     500|
-> |Aros de cebolla            |     500|
-> |**Para tomar**             |   **$**   |
-> |Agua 500ml                 |     500|
-> |Agua 750ml                 |     700|
-> |Bebida/gaseosa 500ml       |     700|
-> |Bebida/gaseosa 750ml       |     1000|
->
-> **Importante:** Los clientes pueden escoger entre hamburguesas de res,
-> de pollo, o vegetariana. Además, por $ 100 adicional, pueden agregarle queso
-> o huevo.
->
-> Nuestros clientes son bastante indecisos, por lo que es muy común que cambien
->el su pedido varias veces antes de finalizarlo.
-
-La interfaz debe mostrar los dos menús (desayuno y resto del día), cada uno
-con todos sus _productos_. El usuario debe poder ir eligiendo qué _productos_
-agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el
-costo total.
-
-![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
-
-## 3. Objetivos de aprendizaje
-
-1. El objetivo principal de es aprender a construir una _interfaz web_ usando
-   el _framework_ elegido (React o Angular). Todos estos frameworks de
-   Front-end atacan el mismo problema: **cómo mantener la interfaz y el estado
-   sincronizados**. Así que esta experiencia espera familiarizarte con el
-   concepto de _estado de pantalla_, y cómo cada cambio sobre el estado se va a
-   ir reflejando en la interfaz (por ejemplo, cada vez que agregamos un
-   _producto_ a un _pedido_, la interfaz debe actualizar la lista del pedido y
-   el total).
-
-2. Como objetivo secundario, deberás seguir las recomendaciones para PWAs
-   (_Progressive Web Apps_), lo cual incluye conceptos como **offline**. Para
-   guiarte con respecto a este tema te recomendamos usar [Lighthouse](https://developers.google.com/web/tools/lighthouse/?hl=es),
-   que es una herramienta de Google que nos ayuda a asegurar que nuestras web
-   apps sigan "buenas prácticas". De hecho, usaremos Lighthouse a la hora de
-   evaluar el proyecto.
-
-3. Finalmente, la interfaz debe estar diseñada específicamente para correr en
-   **tablets**.
-
-Tópicos: _react_, _angular_, _pwa_, _offline-first_, _service-worker_.
-
-## 4. Consideraciones generales
-
-Este proyecto se debe "resolver" en grupo de 3 estudiantes.
-
-Trabaja en una historia hasta terminarla antes de pasar a la siguiente. Trabaja
-hasta la historia que puedas en el tiempo especificado.
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6+), HTML y CSS y empaquetada de manera automatizada.
-En este proyecto Sí está permitido usar librerías o frameworks
-(debes elegir entre [React](https://es.reactjs.org/) o
-[Angular](https://angular.io/)).
-
-La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
-_tablet_, pero **no queremos una app nativa**, sino una web app que sea
-**responsive** y pueda funcionar **offline**.
-
-Necesitamos pensar bien en el aspecto UX de de quienes van a tomar los pedidos,
- el tamaño y aspecto de los botones, la visibilidad del estado actual del
- pedido, etc.
-
-La aplicación desplegada debe tener 80% o más el las puntuaciones de
-Performance, Progressive Web App, Accessibility y Best Practices de Lighthouse.
-
-La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
-`test`, `build` y `deploy`, que se encarguen de arrancar, correr las pruebas,
-empaquetar y desplegar la aplicación respectivamente.
-
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-_lines_ y _branches_.
-
-Este proyecto incluye un _boilerplate_ con el código necesario para arrancar con
-la parte de backend ya resuelta. El _boilerplate_ incluye los siguientes
-archivos/carpetas con la configuración de Fierbase (hosting, firestore y
-functions):
+Somos Burguer Queen, una cadena de comida 24hrs.
 
-```text
-./04-burger-queen/
-├── firebase.json
-├── firestore.indexes.json
-├── firestore.rules
-├── functions
-│   ├── index.js
-│   ├── package.json
-└── README.md
-```
+Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida y, para seguir creciendo, necesitamos un sistema que nos ayude a tomar los pedidos de nuestros clientes.
 
-Por otro lado, la parte de la interfaz no está incluida, por lo que, deberás
-definir la estructura de carpetas y archivos que consideres necesaria. Puedes
-guiarte de las convenciones del _framework_ elegido. Por ende, los _tests_ y el
-_setup_ necesario para ejecutarlos, serán hechos por ti.
+Tenemos 2 menús: uno muy sencillo para el desayuno:
 
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
+Ítem Precio \$
+Café americano 500
+Café con leche 700
+Sandwich de jamón y queso 1000
+Jugo de frutas natural 700
+Y otro menú para el resto del día:
 
-## 5. Criterios de aceptación mínimos del proyecto
+Ítem Precio
+Hamburguesas $
+Hamburguesa simple	1000
+Hamburguesa doble	1500
+Acompañamientos	$
+Papas fritas 500
+Aros de cebolla 500
+Para tomar $
+Agua 500ml	500
+Agua 750ml	700
+Bebida/gaseosa 500ml	700
+Bebida/gaseosa 750ml	1000
+Importante: Los clientes pueden escoger entre hamburguesas de res, de pollo, o vegetariana. Además, por $ 100 adicional, pueden agregarle queso o huevo.
 
-### Definición del producto
+Nuestros clientes son bastante indecisos, por lo que es muy común que cambien el su pedido varias veces antes de finalizarlo.
 
-El [_Product Owner_](https://www.youtube.com/watch?v=r2hU7MVIzxs&t=202s) nos
-presenta este _backlog_ que es el resultado de su trabajo con el cliente hasta
-hoy.
+La interfaz debe mostrar los dos menús (desayuno y resto del día), cada uno con todos sus productos. El usuario debe poder ir eligiendo qué productos agregar y la interfaz debe ir mostrando el resumen del pedido con el costo total.
 
-***
+2. Objetivos
+   Construir una interfaz web usando React, diseñada para tablet. Ademas debe ser Progressive Web Apps y debe debe aplicarse Ligthouse
 
-#### [Historia de usuario 1] Mesero/a debe poder tomar pedido de cliente
+## Historias de Usuarios
 
-Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala
-memoria, para saber cuánto cobrar, y enviarlo a la cocina para evitar errores y
-que se puedan ir preparando en orden.
+**Definición del producto**
+El Product Owner nos presenta este backlog que es el resultado de su trabajo con el cliente hasta hoy.
 
-##### Criterios de aceptación
+**[Historia de usuario 1]** Mesero/a debe poder tomar pedido de cliente
+Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala memoria, para saber cuánto cobrar, y enviarlo a la cocina para evitar errores y que se puedan ir preparando en orden.
 
-Lo que debe ocurrir para que se satisfagan las necesidades del usuario)
+**Criterios de aceptación** (Lo que debe ocurrir para que se satisfagan las necesidades del usuario)
+Anotar nombre de cliente.
+Agregar productos al pedido.
+Eliminar productos.
+Ver resumen y el total de la compra.
+Enviar pedido a cocina (guardar en alguna base de datos).
+Se ve y funciona bien en una tablet
 
-* Anotar nombre de cliente.
-* Agregar productos al pedido.
-* Eliminar productos.
-* Ver resumen y el total de la compra.
-* Enviar pedido a cocina (guardar en alguna base de datos).
-* Se ve y funciona bien en una _tablet_
+**Definición de terminado** (Lo acordado que debe ocurrir para decir que la historia está terminada.)
+Debes haber recibido code review de al menos una compañera.
+Haces test unitarios y, además, has testeado tu producto manualmente.
+Hiciste tests de usabilidad e incorporaste el feedback del usuario.
+Desplegaste tu aplicación y has etiquetado tu versión (git tag).
 
-##### Definición de terminado
+**[Historia de usuario 2]** Jefe de cocina debe ver los pedidos
+Yo como jefx de cocina quiero ver los pedidos de los clientes en orden y marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs que un pedido está listo para servirlo a un cliente.
 
-Lo acordado que debe ocurrir para decir que la historia está terminada.
+**Criterios de aceptación**
+Ver los pedidos ordenados según se van haciendo.
+Marcar los pedidos que se han preparado y están listos para servirse.
+Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se marcó como completado.
+Definición de terminado
+Debes haber recibido code review de al menos una compañera.
+Haces test unitarios y, además, has testeado tu producto manualmente.
+Hiciste tests de usabilidad e incorporaste el feedback del usuario.
+Desplegaste tu aplicación y has etiquetado tu versión (git tag).
 
-* Debes haber recibido _code review_ de al menos una compañera.
-* Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-* Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-* Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+**[Historia de usuario 3]** Meserx debe ver pedidos listos para servir
+Yo como meserx quiero ver los pedidos que están preparados para entregarlos rápidamente a los clientes que las hicieron.
 
-***
+**Criterios de aceptación**
+Ver listado de pedido listos para servir.
+Marcar pedidos que han sido entregados.
 
-#### [Historia de usuario 2] Jefe de cocina debe ver los pedidos
+**Definición de terminado**
+Debes haber recibido code review de al menos una compañera.
+Haces test unitarios y, además, has testeado tu producto manualmente.
+Hiciste tests de usabilidad e incorporaste el feedback del usuario.
+Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+Los datos se deben mantener íntegros, incluso después de que un pedido ha terminado. Todo esto para poder tener estadísticas en el futuro.
 
-Yo como jefx de cocina quiero ver los pedidos de los clientes en orden y
-marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs
-que un pedido está listo para servirlo a un cliente.
+## Flujo
 
-##### Criterios de aceptación
+![Flujo](https://raw.githubusercontent.com/mariaPazBeltran/SCL011-Burger-Queen/master/src/assets/img/flujo.PNG)
 
-* Ver los pedidos ordenados según se van haciendo.
-* Marcar los pedidos que se han preparado y están listos para servirse.
-* Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se
-  marcó como completado.
+## Entrevista
 
-##### Definición de terminado
+Se realizo una entrevista a Jennifer Andrade, encargada de local de Tío Manolo, Florida. Debido a la similitud del servicio que presta esta entidad con la de nuestra Aplicación Burguer-Queen.
 
-* Debes haber recibido _code review_ de al menos una compañera.
-* Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-* Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-* Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+La entrevista se mezclo con técnicas de card sorting puesto que entre los elementos que queríamos definir se encontraban la arquitectura de la aplicación, la cual debía reflejar los requerimientos del potencial usuario de esta. El cual se define como la persona que entre sus responsabilidades esta atender a los clientes que acuden a su local.
 
-***
+[Audio](https://trello.com/c/MuwmXYfO/13-entrevista-ux)
 
-#### [Historia de usuario 3] Meserx debe ver pedidos listos para servir
+Resultados:
 
-Yo como meserx quiero ver los pedidos que están preparados para entregarlos
-rápidamente a los clientes que las hicieron.
+! [Arquitectura]("https://i.ibb.co/wsrNQQr/Arquitectura.jpg")
 
-##### Criterios de aceptación
+Dentro de las observaciones, se destacan los siguientes puntos.
 
-* Ver listado de pedido listos para servir.
-* Marcar pedidos que han sido entregados.
+-Debería contemplar por separado los ingredientes de un sándwich puesto que a veces los clientes quieren con o sin lechuga, tomate etc. Lo mismo ocurre con las papas y los aros de cebolla a veces piden con o sin sal.
 
-##### Definición de terminado
+-Una vez realizado el pedido debería existir la opción de revisar y confirmar el pedido antes de ser enviado a la cocina
 
-* Debes haber recibido _code review_ de al menos una compañera.
-* Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-* Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-* Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-* Los datos se deben mantener íntegros, incluso después de que un pedido ha
-  terminado. Todo esto para poder tener estadísticas en el futuro.
+-una vez terminado el pedido al final del detalle debería existir la opción de diferente formas de pago, ya que actualmente es muy poco el porcentaje de personas que pagan en efectivo. Por ende se debieran contemplar las siguientes opciones:
 
-***
+-Efectivo
 
-## 6. Pistas, tips y lecturas complementarias
+-Debito
 
-### Primeros pasos
+-Crédito
 
-1. El primer paso de este proyecto debe ser convertir el menú descrito por el
-   cliente en una estructura que podamos poner en un archivo JSON para después
-   _pintar_ en la pantalla
+-Cheque Restorán
 
-2. Haz un _fork_ de este repo (en GitHub).
+## Guia-de-estilos
 
-3. Clona tu _fork_ en tu computadora:
+![enter image description here](https://i.ibb.co/BcFy5XF/Paletade-Colores-Burguer-Queen.png)
 
-   ```sh
-   git clone git@github.com:<tu-usuario-de-github>/<cohortid>-burger-queen.git
-   cd <cohortid>-burger-queen
-   ```
+## Prototipo de alta fidelidad
 
-4. Crea una rama a partir de `master` para empezar a trabajar. Por ejemplo:
+[Figma](https://www.figma.com/file/LELmcuygbOhs6mNGyhBRlG/BurguerQueen?node-id=0:1)
+![Inicio](https://i.ibb.co/n6qL0fx/1.png)
+![Menu](https://i.ibb.co/0rCLwHm/2.png)
+![Desayuno](https://i.ibb.co/4tNT9Nx/3.png)
+![Almuerzo](https://i.ibb.co/ngj8VH0/4.png)
+![Cocina](https://i.ibb.co/qBTCrRW/5.png)
 
-   ```sh
-   git checkout -b develop
-   ```
+## Planificación
 
-5. Crear proyecto en [Firebase](https://firebase.google.com/)
+[Trello](https://trello.com/b/qVVNX6pC/burguer-queen)
 
-6. Habilitar Firestore (_comenzar en modo bloqueado_) en sección de "Bases de
-   Datos" de [Firebase console](https://console.firebase.google.com/).
+[Github](https://github.com/NataliaSaavedraM/SCL011-Burger-Queen/projects/1)
 
-7. Instalar utilidad de línea de comando de Firebase:
+## checklist obligatorio
 
-   ```sh
-   npm i -g firebase-tools
-   ```
+**Planificación e Investigación**
 
-8. Agregamos entorno de producción para desplegar:
+- [x] Hace una planificación inicial y el product backlog
+- [x] Revisa y actualiza planificación a medida que se desarrolla el proyecto
+- [x] Realiza historias de usuario
+- [x] Prioriza el desarrollo en cuanto a historias de usuario
+- [x] Realiza entrevistas a usuari@s de la aplicación
+- [x] Itera la planificación/historias de usuario en base al resultado de las entrevistas
+- [] Realiza testeo de usabilidad de la aplicación
+- [] Itera en base al testeo de usabilidad de la app
 
-   ```sh
-   firebase use --add
-   ```
+**Interfaz**
 
-9. Instalar dependencias de cloud functions:
+- [x] Es mobile first y enfocado en tablets
+- [ ] Es responsive
+- [x] Sigue alineamientos de diseño visual
 
-   ```sh
-   # usando yarn
-   cd functions && yarn && cd ..
-   # alternativamente, usando npm
-   cd functions && npm install && cd ..
-   ```
+**Lógica **
 
-10. Desplegar: `firebase deploy`
+- [x] Utiliza reglas de ESlint (ES6+) para su framework
 
-11. Llegado a este punto ya puedes comenzar con el _front-end_ :wink:
+** Es Single Page App**
 
-***
+- [x] Usa funciones pequeñas con una sola responsabilidad
+- [x] Divide su código en módulos (componentes)
+- [x] Mantiene la interfaz y el estado de la app sincronizados
+- [x] React: Trabaja con estados; Angular: Trabaja con servicios (observables)
+- [x] Comenta el código y no hay código muerto
+- [x] Son los nombres de variables y funciones claros, descriptivos y en inglés
 
-Nota para estudiantes que elijan React y quieran usar `create-react-app`:
+**Base de datos y despliegue **
 
-Si tratas de usar `create-react-app` en el directorio del proyecto recibirás un
-error diciendo que hay archivos que podrían presentar un conflicto. Para evitar
-este problema puedes crear una nueva app usando `create-react-app` y de ahí
-_mezclarla_ con la carpeta del proyecto:
+- [ ] Autentica usuari@s
+- [x] Guarda información
+- [x] Lee información
+- [x] Guarda archivos, como imagenes, en Firebase Storage u otro servicio de almacenamiento
+- [x] La app está desplegada y se puede acceder desde cualquier dispositivo
 
-```sh
-# si estabase en la carpeta del proyecto, salimos a la carpeta de más arriba
-cd ..
+** Progressive Web App **
 
-create-react-app burger-queen-tmp
-cp -r burger-queen/* burger-queen-tmp/
-cp -r burger-queen-tmp/.gitignore burger-queen-tmp/* burger-queen/
-rm -rf burger-queen-tmp
-cd burger-queen
-```
+- [ ] Funciona offline
+- [x] Utiliza Lighthouse para auditar la app
 
-### Otros recursos
+** Testing **
 
-#### Frameworks / libraries
+- [ ] Realiza tests unitarios
+- [ ] Ocupa herramientas como Jest, Enzyme, Jasmine o Karma (u otro)
+- [ ] Tiene un 70% de coverage
 
-* [React](https://es.reactjs.org/)
-* [Angular](https://angular.io/)
+** GIT **
 
-#### Herramientas
-
-* [npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [Babel](https://babeljs.io/)
-* [webpack](https://webpack.js.org/)
-
-#### PWA
-
-* [Tu primera Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
-* [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
-* [offlinefirst.org](http://offlinefirst.org/)
-* [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-* [Cómo habilitar datos sin conexión - Firebase Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419)
-
-#### Serverless
-
-* [Qué es eso de serverless? - @PamRucinque en Medium](https://medium.com/@PamRucinque/qu%C3%A9-es-eso-de-serverless-f4f6c8949b87)
-* [Qué es Serverless? | FooBar - YouTube](https://www.youtube.com/watch?v=_SYHUpLi-2U)
-* [Firebase](https://firebase.google.com/)
-* [Serverless Architectures - Martin Fowler](https://www.martinfowler.com/articles/serverless.html)
-
-#### Cloud functions
-
-* [Cloud functions - Firebase Docs](https://firebase.google.com/docs/functions/?hl=es-419)
-
-<!-- ## Checklist
-
-### General
-
-* [ ] Producto final sigue los lineamientos del diseño.
-
-### `README.md`
-
-* [ ] Documenta proceso de diseño.
-* [ ] Incluye info para developers (deps, instalación, uso, despliegue, testing,
-  ...).
-
-### Lighthouse
-
-* [ ] 80% o más en sección _Performance_.
-* [ ] 80% o más en sección _Progressive Web App_.
-* [ ] 80% o más en sección _Accessibility_.
-* [ ] 80% o más en sección _Best Practices_.
-
-### Tests
-
-* [ ] 70% o más en cobertura de _statements_.
-* [ ] 70% o más en cobertura de _functions_.
-* [ ] 70% o más en cobertura de _lines_.
-* [ ] 70% o más en cobertura de _branches_.
-
-### UI
-
-#### Hito 1: Tomar pedidos
-
-* [ ] Ingresar nombre del cliente.
-* [ ] Filtrar _menú_ por _desayuno_ y _resto del día_.
-* [ ] Agregar ítem al pedido.
-* [ ] Eliminar ítem del pedido.
-* [ ] Mostrar _resumen_ de pedido con todos los items y el total.
-* [ ] Enviar a cocina (esto debe guardar el pedido).
-
-#### Hito 2: Ver/atender pedidos
-
-* [ ] Vista de pedidos pendientes.
-* [ ] Marcar pedido como listo.
-* [ ] Ver historial de pedidos.
-
-#### Hito 3: Autenticación
-
-* [ ] Inicio de sesión.
-* [ ] Restaurar contraseña.
-
-### UX
-
-* [ ] Se _ve_ bien y _funciona_ bien en tablets.
-* [ ] Se puede _agregar a la pantalla de inicio_ como web app (tiene manifest,
-  íconos, ...) en iOS y Android.
-* [ ] Uso fácil en pantallas táctiles (touch screens).
-* [ ] Estado actual del pedido siempre visible mientras tomamos un pedido.
-
--->
+- [x] Hace commits con propósito claro y pequeños
+- [x] Usa ramas de desarrollo o feature
+- [x] Hay pull requests con intención clara, una característica en particular para cada uno
+- [x] Usa tags en su repositorio
+- [x] Usa issues para reportar bugs o cosas por hacer

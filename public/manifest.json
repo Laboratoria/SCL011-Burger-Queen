@@ -1,0 +1,26 @@
+{
+  "name": "#BurguerQueen",
+  "short_name": "#BurguerQueen",
+  "description": "Bienvenid@s a #BurguerQueen, la aplicacion hara mejorar la gestion de tu  restorante :)",
+  "background_color": "#FEDC63",
+  "theme_color": "#430064",
+  "orientation":"landscape",
+  "display": "standalone",
+  "start_url": "https://burger-queen-2dc5a.firebaseapp.com",
+  "scope": "./",
+  "lang": "es",
+  "icons": [
+    
+
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
