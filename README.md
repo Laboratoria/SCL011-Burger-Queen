@@ -1,68 +1,86 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Burger queen
 
-## Available Scripts
+El sitio web Burger Queen esta pensado en un pequeño restaurante de hamburguesas que está creciendo, necesita una interfaz en la que puedan tomar pedidos usando una tablet, y enviarlos a la cocina para que se preparen ordenada y eficientemente (a través de un backend ).
 
-In the project directory, you can run:
+### Proceso
+Para crear proyecto se comienza con flujo , el cual tuvo diversas iteraciones durante su construcción , quedando como resultado final :
+![Flujo](https://i.ibb.co/QpZTHyX/flujo-burger-queen.png)
+ 
+### Historia de Usuario 1:
 
-### `npm start`
+Yo como usuario como mesero necesito tener un menú (desayuno y almuerzo) para poder visualizar los alimentos que tenemos para ofrecer y para que estos no se me olviden
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Criterios de aceptación:**
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+-2 botones con la opción de Desayuno y almuerzo
 
-### `npm test`
+-Al hacer ‘click’ en los botones se despliegan los menús correspondiente
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-Diseño css
 
-### `npm run build`
+-Diseño responsivo
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**Historia de Usuario dos**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Yo como mesero necesito ver un resumen de los pedidos con sus respectivos precios y total de compra para que no se me olviden
 
-### `npm run eject`
+**Criterios de aceptación:**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-Mostrar resumen de los pedidos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-Mostrar precio de cada pedido
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-Mostrar total de compra
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-Opción de eliminar pedido
 
-## Learn More
+-Diseño css
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-Diseño responsivo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Historia de usuario 3**
 
-### Code Splitting
+Yo como mesero necesito poder enviar los pedidos a la cocina para que sean preparados
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+**Criterios de aceptación**
 
-### Analyzing the Bundle Size
+-Botón para enviar pedido
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+-Eliminar los pedidos ya enviados
 
-### Making a Progressive Web App
+-Diseño css
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+-Diseño responsivo
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+#### Historia de usuario 4
 
-### Deployment
+Yo como jefe de cocina quiero ver los pedidos de los clientes en orden y marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs que un pedido está listo para servirlo a un cliente.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+**Criterios de aceptación**
 
-### `npm run build` fails to minify
+-Ver los pedidos ordenados según se van haciendo.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+-Marcar los pedidos que se han preparado y están listos para servirse.
+
+-Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se marcó como completado
+
+
+**Historia de usuario 5**
+
+Yo como mesero quiero ver los pedidos que están preparados para entregarlos rápidamente a los clientes que las hicieron.
+
+##### Criterios de aceptación
+
+-Ver listado de pedido listos para servir.
+
+-Marcar pedidos que han sido entregados.
+
+ 
+### Iteración prototipo alta fidelidad
+
+La primera iteración fue en equipo, considerando que el diseño consideraba lo básico y decidimos cambiar la segunda opción de "Elegir trabajador" por "Nombre cliente". Además agregar el campo comentarios y un headbar con las opciones de Pedidos y Cocina.
+
+Al finalizar con estos cambios, se hizo un test con usuaria que trabaja como mesera, para ver apreciación en diseño y funcionalidad. De esta iteración se saca aumentar el tamaño de los signos + y - ya que al utilizar con los dedos, es más fácil acceder a ellos sin topar el resto. Además, poder poner la caja de comentarios linkeada de alguna forma a la caja de total.
+
