@@ -7,7 +7,8 @@ import { Table, Button } from "reactstrap";
 export default class Breakfast extends Component {
 
     state = {
-        items: []
+        items: [],
+        value:"",
     }
 // snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
     componentDidMount () {
@@ -21,9 +22,16 @@ export default class Breakfast extends Component {
         })
     }
 
+    actionButton = (e) => {
+        this.setState({
+            buttonValue:e.target.value
+        })
+    }
+
 
     render () {
-        const { items } = this.state;
+        const { items, buttonValue} = this.state;
+
         return (
             <div>
                 <Table>
@@ -35,13 +43,23 @@ export default class Breakfast extends Component {
                     <tbody>
                         { items && items !== undefined ? items.map((item, key) => (
                             <tr key={key}>
-                                <td>{item.data.name}</td>
+                                {item.data.name}
                                 <td>{item.data.price}</td>
-                                <td><Button>Agregar</Button></td>
-                                <td><Button>Eliminar</Button></td>
+
+                                <td>
+                                <Button 
+                                value={buttonValue}
+                                onClick={this.actionButton}>
+
+                                </Button>
+                                <button onClick={e => this.setState({buttonValue})}>
+                                Agregar</button>
+                                </td>
+                                <td><button>Eliminar</button>
+                                </td>
                             </tr>
 
-                        ) ):null } 
+                        )):null } 
                     </tbody>
                 </Table>
 
@@ -49,3 +67,8 @@ export default class Breakfast extends Component {
         )  
     }
 }
+
+
+/*<button onClick={e => this.setState({buttonValue})}>
+                                Agregar</button>
+                                */
