@@ -50,7 +50,7 @@ export class BurguerComponent implements OnInit {
         .subscribe( (resp: any) => {
           this.menus = resp;
           console.log('entro');
-          console.log(this.menus);
+         // console.log(this.menus);
           this.burguer =  filter(this.menus, 'burguer')
           this.drinks =  filter(this.menus, 'drinks')
           this.bFast =  filter(this.menus, 'bFast')
