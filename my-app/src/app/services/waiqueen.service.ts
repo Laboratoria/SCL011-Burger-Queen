@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map } from "rxjs/operators";
+import { map} from "rxjs/operators";
 import { Observable } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { TablsModel } from '../models/mesa.model';
 import { menuModel } from '../models/menu.model';
+import { filter } from 'rxjs/operators';
+import { element } from 'protractor';
 
 
 
@@ -22,8 +23,9 @@ export class WaiqueenService {
 //variable para arrays
  arrayTabls: Observable<TablsModel[]>;
  arraymens: Observable<menuModel[]>;
+ arrayburguer:Observable<menuModel[]>;
 
-   constructor(private afs: AngularFirestore) {
+constructor(private afs: AngularFirestore) {
 
     //Peticion de coleccion de mesas
        this.tablsCollection = afs.collection<TablsModel>('mesas');
@@ -56,6 +58,12 @@ export class WaiqueenService {
   
     //Funcion que retorna la data de menu en un array
     getmens(){
-      return this.arraymens;
+      // const casa = this.arraymens.pipe(filter(element => {
+      //   console.log(element);
+      // }))
+      // console.log('-------------------------');
+      // console.log(casa);
+      return this.arraymens
     }
 }
+//pipe(filter(ev => ev.target.tagName === 'DIV'));

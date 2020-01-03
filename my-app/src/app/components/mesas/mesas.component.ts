@@ -23,8 +23,7 @@ export class MesasComponent implements OnInit {
     this.waiqueenService.getTabls()
           .subscribe( resp =>{
              this.tables = resp
-
-          console.log(this.tables);
+              //console.log(this.tables);
             });
           
   }

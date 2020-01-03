@@ -3,6 +3,7 @@
 export class menuModel{
 
     id:string;
+    categoria:string;
     name:string;
     price:number;  
 

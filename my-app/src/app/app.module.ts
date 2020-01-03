@@ -9,6 +9,11 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 //Modulo de peticiones http
 import { HttpClientModule } from '@angular/common/http'
 
+//Pipes
+import { FilterPipe } from './pipe/filter.pipe';
+
+
+
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
 
@@ -33,7 +38,9 @@ import { BurguerComponent } from './components/menu/burguer/burguer.component';
     PedidosComponent,
     MesasComponent,
     NavbarComponent,
-    BurguerComponent,  
+    BurguerComponent,
+    FilterPipe,
+    
   ],
     imports: [
     BrowserModule,
