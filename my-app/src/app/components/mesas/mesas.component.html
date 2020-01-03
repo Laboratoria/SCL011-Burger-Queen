@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<section class="main-g">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" class="table-primary">Mesa</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let table of tables">
+
+                <th scope="row">
+                    <button (click)="getTable(table.numbertable)" class="btntable" [routerLink]="['/menu']"> 
+                                {{table.nametable}}
+                    </button>
+                </th>
+
+            </tr>
+
+            <button class="btn btn-success"><i class="fa fa-plus"></i> Agregar nueva mesa </button>
+
+
+        </tbody>
+    </table>
+
+    <div class="alert alert-info text-center mt-3" role="alert">
+        <h4 class="alert-heading">Cargando</h4>
+        <p>
+            <i class="fa fa-sync-alt fa-spin fa-2x"></i>
+        </p>
+        <p class="mb-0">
+            Espere por favor
+        </p>
+    </div>
+
+
+</section>

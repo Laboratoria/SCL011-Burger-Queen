@@ -1,0 +1,72 @@
+[
+    {
+        "tableNumber": 1,
+        "name": "Mesa 1",
+        "client": null,
+        "orders": [],
+        "total": 0
+      },
+      {
+        "tableNumber": 2,
+        "name": "Mesa 2",
+        "client": null,
+        "orders": [],
+        "total": 0
+      },
+      {
+        "tableNumber": 3,
+        "name": "Mesa 3",
+        "client": null,
+        "orders": [],
+        "total": 0
+      },
+      {
+        "tableNumber": 4,
+        "name": "Mesa 4",
+        "client": null,
+        "orders": [],
+        "total": 0
+      },
+      {
+        "tableNumber": 5,
+        "name": "Mesa 5",
+        "client": null,
+        "orders": [],
+        "total": 0
+      },
+      {
+        "tableNumber": 6,
+        "name": "Mesa 6",
+        "client": null,
+        "orders": [],
+        "total": 0
+      },
+      {
+        "tableNumber": 7,
+        "name": "Mesa 7",
+        "client": null,
+        "orders": [],
+        "total": 0
+      },
+      {
+        "tableNumber": 8,
+        "name": "Mesa 8",
+        "client": null,
+        "orders": [],
+        "total": 0
+      },
+      {
+        "tableNumber": 9,
+        "name": "Mesa 9",
+        "client": null,
+        "orders": [],
+        "total": 0
+      },
+      {
+        "tableNumber": 10,
+        "name": "Mesa 10",
+        "client": null,
+        "orders": [],
+        "total": 0
+      }
+    ]

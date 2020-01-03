@@ -1,0 +1,9 @@
+.btntable {
+    background-color: rgb(26, 135, 206);
+    border: none;
+    color: white;
+    padding: 10px 100px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}

@@ -1,0 +1,208 @@
+
+[
+    {
+      "name": "Café americano",
+      "price": 500,
+      "haveOptions": false,
+      "options": ["Regular"],
+      "haveExtras": false,
+      "extras": [],
+      "priceExtra": null,
+      "image": "",
+      "id": "001",
+      "selectedOption": "Regular",
+      "turn": "desayuno",
+      "description": "Café Americano recién hecho",
+      "quantity": null,
+      "category": "bebida"
+    },
+    {
+      "name": "Café con leche",
+      "price": 700,
+      "haveOptions": false,
+      "options": ["Regular"],
+      "haveExtras": false,
+      "extras": [],
+      "priceExtra": null,
+      "image": "",
+      "id": "002",
+      "selectedOption": "Regular",
+      "turn": "desayuno",
+      "description": "Expresso delicioso con leche",
+      "quantity": null,
+      "category": "bebida"
+    },
+    {
+      "name": "Jugo natural",
+      "price": 700,
+      "haveOptions": true,
+      "options": ["Frutilla", "Maracuyá",  "Naranja", "Mango"],
+      "haveExtras": false,
+      "extras": [],
+      "image": "",
+      "id": "003",
+      "selectedOption": "Frutilla",
+      "turn": "desayuno",
+      "description": " Deliciosos jugos refrescantes diferentes sabores ",
+      "quantity": null,
+      "category": "bebida"
+    },
+    {
+      "name": "Sandwich de jamón y queso",
+      "price": 1000,
+      "haveOptions": true,
+      "options": ["Frica", "Molde"],
+      "haveExtras": false,
+      "extras": [],
+      "image": "",
+      "id": "004",
+      "selectedOption": "Frica",
+      "turn": "desayuno",
+      "description": "Delicioso  pan tostado  de jamón  queso",
+      "quantity": null,
+      "category": "comida"
+    },
+    {
+      "name": "Hamburguesa simple",
+      "price": 1000,
+      "haveOptions": true,
+      "options": ["Res", "Pollo", "Vegetariana"],
+      "haveExtras": true,
+      "extras": [
+        {
+          "name": "Queso",
+          "add": false,
+          "price": 500
+        },
+        {
+          "name": "Huevo",
+          "add": false,
+          "price": 500
+        }
+      ],
+      "image": "",
+      "id": "005",
+      "selectedOption": "Res",
+      "turn": "almuerzo",
+      "description": "Hamburguesa simple con:  tomate y lechuga",
+      "quantity": null,
+      "category": "comida"
+    },
+    {
+      "name": "Hamburguesa doble",
+      "price": 1500,
+      "haveOptions": true,
+      "options": ["Res", "Pollo", "Vegetariana"],
+  
+      "haveExtras": true,
+      "extras": [
+        {
+          "name": "Queso",
+          "add": false,
+          "price": 500
+        },
+        {
+          "name": "Huevo",
+          "add": false,
+          "price": 500
+        }
+      ],
+      "image": "",
+      "id": "006",
+      "selectedOption": "Res",
+      "turn": "almuerzo",
+      "description": "Hamburguesa doble con: palta, tomate y lechuga",
+      "quantity": null,
+      "category": "comida"
+    },
+    {
+      "name": "Papas fritas",
+      "price": 500,
+      "haveOptions": false,
+      "options": ["Medianas"],
+      "haveExtras": false,
+      "extras": [],
+      "image": "",
+      "id": "007",
+      "selectedOption": "Medianas",
+      "turn": "almuerzo",
+      "description": " Sabrosas y crujientes papas de la casa",
+      "quantity": null,
+      "category": "comida"
+    },
+    {
+      "name": "Aros de cebolla",
+      "price": 500,
+      "haveOptions": false,
+      "options": ["Medianas"],
+      "haveExtras": false,
+      "extras": [],
+      "image": "",
+      "id": "008",
+      "selectedOption": "Medianas",
+      "turn": "almuerzo",
+      "description": "Crujientes aros de cebolla",
+      "quantity": null,
+      "category": "comida"
+    },
+    {
+      "name": "Agua 500ml",
+      "price": 500,
+      "haveOptions": true,
+      "options": ["Con gas", "Sin gas"],
+      "haveExtras": false,
+      "extras": [],
+      "image": "",
+      "id": "009",
+      "selectedOption": "Con gas",
+      "turn": "almuerzo",
+      "description": "Benedictino",
+      "quantity": null,
+      "category": "bebida"
+    },
+    {
+      "name": "Agua 750ml",
+      "price": 800,
+      "haveOptions": true,
+      "options": ["Con gas", "Sin gas"],
+      "haveExtras": false,
+      "extras": [],
+      "image": "",
+      "id": "010",
+      "selectedOption": "Con gas",
+      "turn": "almuerzo",
+      "description": "Benedictino",
+      "quantity": null,
+      "category": "bebida"
+    },
+    {
+      "name": "Gaseosa 500ml",
+      "price": 700,
+      "haveOptions": true,
+      "options": ["Pepsi", "Pap", "Bilz", "Limon soda"],
+      "haveExtras": false,
+      "extras": [],
+      "image": "",
+      "id": "011",
+      "selectedOption": "Coca cola",
+      "turn": "almuerzo",
+      "description": "Gaseosa con hielo",
+      "quantity": null,
+      "category": "bebida"
+    },
+    {
+      "name": "Gaseosa 750ml",
+      "price": 1000,
+      "haveOptions": true,
+      "options": ["Pepsi", "Pap", "Bilz", "Limon soda"],
+      "haveExtras": false,
+      "extras": [],
+      "image": "",
+      "id": "012",
+      "selectedOption": "Coca cola",
+      "turn": "almuerzo",
+      "description": "Gaseosa con Hielo",
+      "quantity": null,
+      "category": "bebida"
+    }
+]      
