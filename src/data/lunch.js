@@ -6,13 +6,10 @@ import { Table } from "reactstrap";
  
 class Lunch extends Component {
 
-    constructor(props){
-        super(props)
-        this.state={
+        state={
             items:[],
         }
-    }
-
+  
 // snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
     componentDidMount () {
         db.collection("lunch").get().then((snapShots) => {
@@ -27,8 +24,8 @@ class Lunch extends Component {
 
     getOrder = () => {
         db.collection("pedidos").add({
-            name: this.state.name, 
-            price: this.state.price
+            name: "", 
+            price: "",
             })
             .then ( () => {
                 console.log("ok")

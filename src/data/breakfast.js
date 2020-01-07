@@ -33,7 +33,6 @@ class Breakfast extends Component {
                 console.log("error")
             })
         }
-    
 
 // snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
 
