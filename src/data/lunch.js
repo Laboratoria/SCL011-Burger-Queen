@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import db from '../config';
-import { Table, Button } from "reactstrap";
+import { Table } from "reactstrap";
 
 // import { useFirebaseApp, useDatabaseList } from "reactfire";
  
-export default class Lunch extends Component {
+class Lunch extends Component {
 
-    state = {
-        items: []
+    constructor(props){
+        super(props)
+        this.state={
+            items:[],
+        }
     }
+
 // snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
     componentDidMount () {
         db.collection("lunch").get().then((snapShots) => {
@@ -21,24 +25,29 @@ export default class Lunch extends Component {
         })
     }
 
-
+    getOrder = () => {
+        db.collection("pedidos").add({
+            name: this.state.name, 
+            price: this.state.price
+            })
+            .then ( () => {
+                console.log("ok")
+            }).catch ( () => {
+                console.log("error")
+            })
+        }
+    
     render () {
         const { items } = this.state;
         return (
             <div>
                 <Table>
-                    <thead>
-                        <tr>
-                            
-                        </tr>
-                    </thead>
                     <tbody>
                         { items && items !== undefined ? items.map((item, key) => (
                             <tr key={key}>
                                 <td>{item.data.name}</td>
                                 <td>{item.data.price}</td>
-                                <td><Button>Agregar</Button></td>
-                                <td><Button>Eliminar</Button></td>
+                                <button onClick={this.getOrder}>Agregar</button>
                             </tr>
 
                         ) ):null } 
@@ -49,3 +58,5 @@ export default class Lunch extends Component {
         )  
     }
 }
+
+export default Lunch

@@ -7,7 +7,7 @@ import Auth from './Component/Auth';
 import Nav from './Component/Navigation'
 import { useUser } from 'reactfire' ;
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 function App () {
 
