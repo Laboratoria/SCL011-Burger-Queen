@@ -1,4 +1,119 @@
-.Waiter {
-  text-align: left;
+*{
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
   background-color: #343638;
+}
+
+.burgerHeader {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.inputsContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btnsContainer {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.comandaContainer {
+  float: left;
+  width: 55%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.comanda2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  color: #ffffff;
+  background-color: #4D5054;
+}
+/* 
+.menusContainer {
+
+} */
+
+.hola {
+  float: left;
+}
+
+
+.title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 22px;
+  margin-top: 10%;
+  margin-bottom: 6%;
+}
+
+/* Responsive */
+
+/* @media screen and (min-width:1501px) and (max-width:1800px){
+}
+
+@media screen and (min-width:1025px) and (max-width:1500px){
+} */
+
+@media screen and (min-width:750px) and (max-width:1024px){
+  .inputsContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .btnsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .title {
+    font-size: 20px;
+    margin-top: 10%;
+    margin-bottom: 6%;
+  }
+}
+
+@media screen  and (max-width:750px) and (min-width:501px){
+  .inputsContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .btnsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .title {
+    font-size: 18px;
+    margin-top: 10%;
+    margin-bottom: 6%;
+  }
+}
+
+@media screen  and (max-width:500px) and (min-width:320px){
+  .inputsContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .btnsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .title {
+    font-size: 18px;
+    margin-top: 10%;
+    margin-bottom: 6%;
+  }
 }

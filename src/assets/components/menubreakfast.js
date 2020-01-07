@@ -1,116 +1,130 @@
 import React, { Component } from 'react'
 import json1 from '../../data.json'
 import ButtonMenu from './buttonmenu'
-import InputName from './input.js'
-import Combobox from './combobox.js'
 import db from '../../firebase'
+import Button from '@material-ui/core/Button'
+import Comments from '../components/comments.js'
+import { withStyles } from '@material-ui/core/styles'
 
-class MenuBreakFast extends Component{
-  constructor(props){
+
+class MenuBreakFast extends Component {
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
 
-    json1:json1.Breakfast,
-    price: [],
-    product: []
+      json1: json1.Breakfast,
+      price: [],
+      product: []
+    }
   }
-}
-clickBtn2=(productMenu)=>{
-   
-  let productState = this.state.product;
-  productState.push(productMenu);
-   
-   this.setState({
-     product: productState
-   }); 
-  
-   let totalPrice =this.state.product.map(elementProduct=>elementProduct.price)
-   
-   const total = totalPrice.reduce((acum, elemt) => acum + elemt, 0)
-   console.log(total)
-   
-   let precios = this.state.price;
-   precios.push(total)
-  
-   this.setState({
-    price: precios
-  }); 
-   console.log(this.state.price);
-   
-   console.log("ESTADO:", this.state.product);
+  clickBtn2 = (productMenu) => {
+
+    let productState = this.state.product;
+    productState.push(productMenu);
+
+    this.setState({
+      product: productState
+    });
+
+    let totalPrice = this.state.product.map(elementProduct => elementProduct.price)
+
+    const total = totalPrice.reduce((acum, elemt) => acum + elemt, 0)
+    console.log(total)
+
+    let precios = this.state.price;
+    precios.push(total)
+
+    this.setState({
+      price: precios
+    });
+    console.log(this.state.price);
+
+    console.log("ESTADO:", this.state.product);
   }
 
   //funcion para borrar post
-  remove(index,price ) {
-  
-    const removeProduct = this.state.product.filter((element ,i)=>{
-    return i !==index 
-    
-  })
-  
-    this.setState({
-    product:removeProduct,
-    
-  })
+  remove(index, price) {
 
-    let reducePrice= (this.state.price[this.state.price.length - 1] -price);
-    let statePrice =this.state.price
-    statePrice.push(reducePrice) 
+    const removeProduct = this.state.product.filter((element, i) => {
+      return i !== index
+
+    })
 
     this.setState({
-    price:statePrice
-  })
-  
-}
-sendKitchen=()=>{
-  db.collection("orders").add({
-    productTotal: this.state.product,
-    totalOrderPrice: this.state.price[this.state.price.length - 1]
-   
-  })
-  .then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
-    alert("Pedido envaido a cocina")
-  })
+      product: removeProduct,
 
-  .catch(function(error) {
-    console.error("Error adding document: ", error);
-    alert("Error al enviar, intentelo denuevo")
-  });
-      let productsFilter = this.state.product;
-      let priceFilter  =this.state.price
+    })
 
-      priceFilter=[]
-      productsFilter=[]
-      
-      this.setState({
-      product:productsFilter,
-      price:priceFilter
+    let reducePrice = (this.state.price[this.state.price.length - 1] - price);
+    let statePrice = this.state.price
+    statePrice.push(reducePrice)
 
- }) 
+    this.setState({
+      price: statePrice
+    })
+
   }
-  render(){
-    
-    return <div>
-      <Combobox/>
-      <InputName/>
-      {this.state.json1.map((element) => (
-      <ButtonMenu key={element.id} clickBtn={this.clickBtn2} productProp={element} />
+  sendKitchen = () => {
+    db.collection("orders").add({
+      productTotal: this.state.product,
+      totalOrderPrice: this.state.price[this.state.price.length - 1]
 
-      ))}
+    })
+      .then(function (docRef) {
+        console.log("Document written with ID: ", docRef.id);
+        alert("Pedido envaido a cocina")
+      })
 
-      {this.state.product.map((elementProduct,i)=> {return <div>
-     <p key ={elementProduct.id}>{elementProduct.price}{elementProduct.product}</p>
-     <button onClick={this.remove.bind(this, i ,elementProduct.price)} >Eliminar</button>
-     </div>
+      .catch(function (error) {
+        console.error("Error adding document: ", error);
+        alert("Error al enviar, intentelo denuevo")
+      });
+    let productsFilter = this.state.product;
+    let priceFilter = this.state.price
 
-     })}
+    priceFilter = []
+    productsFilter = []
 
-     <p>{this.state.price[this.state.price.length - 1]}</p>
-     <button onClick={()=>this.sendKitchen()}>enviar</button>
-  
-     </div>
+    this.setState({
+      product: productsFilter,
+      price: priceFilter
+
+    })
+  }
+  render() {
+    const { classes } = this.props;
+    return <div className="menusContainer">
+      <div className="comandaContainer">
+        {this.state.json1.map((element) => (
+          <ButtonMenu key={element.id} clickBtn={this.clickBtn2} productProp={element} />
+        ))}
+      </div>
+      <div>
+        {this.state.product.map((elementProduct, i) => {
+          return <div className="comanda2">
+            <p className="hola" key={elementProduct.id}>{elementProduct.product} ${elementProduct.price}</p>
+            <button onClick={this.remove.bind(this, i, elementProduct.price)}>
+              <i class="fas fa-trash-alt"></i>
+              Eliminar
+      </button>
+          </div>
+
+        })}
+        <div>
+          <Comments />
+          <p>Total {this.state.price[this.state.price.length - 1]}</p>
+          <Button variant="contained" className={classes.active} onClick={() => this.sendKitchen()}>Enviar a cocina</Button>
+        </div>
+      </div>
+    </div>
   }
 }
 
-export default MenuBreakFast
+export default withStyles({
+  active: {
+    color: '#FFFFFF',
+    backgroundColor: '#FFA800',
+    margin: '20px 20px',
+    fontWeight: 'bold'
+  }
+})(MenuBreakFast)

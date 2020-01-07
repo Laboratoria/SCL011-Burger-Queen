@@ -16,6 +16,7 @@ import { withStyles } from '@material-ui/core/styles'
     active:{
       color: '#FFFFFF',
       backgroundColor: '#FFA800',
-      margin: '20px 20px 10px'
+      margin: '20px 20px',
+      fontWeight: 'bold'
     }
   }) (ButtonGeneric)
