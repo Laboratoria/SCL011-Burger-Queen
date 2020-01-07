@@ -1,0 +1,20 @@
+{
+    "breakfast":
+    [
+        {
+        "id": 0,
+        "title": "cafe americano",
+        "price": 500
+        },
+        {
+        "id": 1,
+        "title": "jugo de frutas natural",
+        "price": 1000
+        },
+    {
+        "id": 2,
+        "title": "sandwich jamón y queso",
+        "price": 1000
+    }
+]
+}
