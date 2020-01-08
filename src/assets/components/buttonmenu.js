@@ -19,7 +19,8 @@ class ButtonMenu extends Component{
     active:{
       color: '#FFFFFF',
       backgroundColor: '#23977B',
-      margin: '10px'
+      marginRight: '10px',
+      marginBottom: '10px',
     }
   }) (ButtonMenu)
 

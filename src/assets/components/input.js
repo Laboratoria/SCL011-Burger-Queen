@@ -10,7 +10,7 @@ class InputName extends Component {
         const { classes } = this.props;
         return (
         <div> 
-            <p className="title">2. NOMBRE CLIENTE</p>
+            <div className="title">2. NOMBRE CLIENTE</div>
             <Input placeholder="Nombre cliente" className={classes.input} color="secondary"/>
         </div>
         );
@@ -20,7 +20,8 @@ class InputName extends Component {
 export default withStyles({
     input: {
         paddingLeft: 10,
-        width: 350,
-        backgroundColor: '#ffffff'
+        width: 250,
+        backgroundColor: '#ffffff',
+        marginBottom: '3%',
     }
   }) (InputName)

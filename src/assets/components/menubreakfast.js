@@ -5,6 +5,9 @@ import db from '../../firebase'
 import Button from '@material-ui/core/Button'
 import Comments from '../components/comments.js'
 import { withStyles } from '@material-ui/core/styles'
+import InputName from '../components/input.js'
+import Combobox from '../components/combobox.js'
+
 
 class MenuBreakFast extends Component {
   constructor(props) {
@@ -17,31 +20,31 @@ class MenuBreakFast extends Component {
     }
   }
 
-  
 
-  selectProduct=(productMenu)=>{
-   
-  let productState = this.state.product;
-  productState.push(productMenu);
-   
-   this.setState({
-     product: productState
-   }); 
-  
-   let totalPrice =this.state.product.map(elementProduct=>elementProduct.price)
-   
-   const total = totalPrice.reduce((acum, elemt) => acum + elemt, 0)
-   console.log(total)
-   
-   let precios = this.state.price;
-   precios.push(total)
-  
-   this.setState({
-    price: precios
-  }); 
-   console.log(this.state.price);
-   
-   console.log("ESTADO:", this.state.product);
+
+  selectProduct = (productMenu) => {
+
+    let productState = this.state.product;
+    productState.push(productMenu);
+
+    this.setState({
+      product: productState
+    });
+
+    let totalPrice = this.state.product.map(elementProduct => elementProduct.price)
+
+    const total = totalPrice.reduce((acum, elemt) => acum + elemt, 0)
+    console.log(total)
+
+    let precios = this.state.price;
+    precios.push(total)
+
+    this.setState({
+      price: precios
+    });
+    console.log(this.state.price);
+
+    console.log("ESTADO:", this.state.product);
 
   }
   //funcion para borrar post
@@ -63,52 +66,56 @@ class MenuBreakFast extends Component {
 
     this.setState({
 
-    price:statePrice
-  })
-  
-}
-sendKitchen=()=>{
-  let date = new Date ()
-  let dateInit = date.getHours() + ":" + date.getMinutes() ; 
-  db.collection("orders").add({
+      price: statePrice
+    })
 
-    productTotal: this.state.product,
-    totalOrderPrice: this.state.price[this.state.price.length - 1],
-    state: "pendiente",
-    date:new Date(),
-    dateCollection:dateInit,
-   
-  })
-  .then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
-    alert("Pedido enviado a cocina")
-  })
-
-  .catch(function(error) {
-    console.error("Error adding document: ", error);
-    alert("Error al enviar, intentelo denuevo")
-  });
-      let productsFilter = this.state.product;
-      let priceFilter  =this.state.price
-
-      priceFilter=[]
-      productsFilter=[]
-      
-      this.setState({
-      product:productsFilter,
-      price:priceFilter
-
- }) 
   }
-  
-  
+  sendKitchen = () => {
+    let date = new Date()
+    let dateInit = date.getHours() + ":" + date.getMinutes();
+    db.collection("orders").add({
+
+      productTotal: this.state.product,
+      totalOrderPrice: this.state.price[this.state.price.length - 1],
+      state: "pendiente",
+      date: new Date(),
+      dateCollection: dateInit,
+
+    })
+      .then(function (docRef) {
+        console.log("Document written with ID: ", docRef.id);
+        alert("Pedido enviado a cocina")
+      })
+
+      .catch(function (error) {
+        console.error("Error adding document: ", error);
+        alert("Error al enviar, intentelo denuevo")
+      });
+    let productsFilter = this.state.product;
+    let priceFilter = this.state.price
+
+    priceFilter = []
+    productsFilter = []
+
+    this.setState({
+      product: productsFilter,
+      price: priceFilter
+
+    })
+  }
+
+
   render() {
     const { classes } = this.props;
-    return <div className="menusContainer">
+    return <div>
       <div className="commandContainer">
         {this.state.json1.map((element) => (
           <ButtonMenu key={element.id} clickBtn={this.selectProduct} productProp={element} />
         ))}
+      </div>
+      <div className="inputsContainer">
+        <Combobox />
+        <InputName />
       </div>
       <div>
         {this.state.product.map((elementProduct, i) => {
