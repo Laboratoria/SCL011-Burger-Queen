@@ -14,7 +14,7 @@ class Kitchen extends Component{
                 this.setState({
                         productKitchen: snapShots.docs.map(doc=>{
                         console.log(doc.data().dateCollection);  
-                        return{id:doc.id, data:doc.data().productTotal , date :doc.data().dateCollection}
+                        return{id:doc.id, data:doc.data().productTotal , date :doc.data().dateCollection ,name :doc.data().clientName}
                         
                         
                     })
@@ -30,8 +30,8 @@ class Kitchen extends Component{
 
            {productKitchen.map((element )=>(   
 
-           <div className="orderProducts">  <p className="productTitle">Pedidos</p> 
-
+          <div className="orderProducts">  <p className="productTitle">Orden de : {element.name}</p> 
+           
            <p className="initOrder">Inicio de pedido : {element.date} horas</p>
 
            {element.data.map(datos =>{

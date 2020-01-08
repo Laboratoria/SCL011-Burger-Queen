@@ -87,6 +87,7 @@ handleInput= e => {
       state: "pendiente",
       date: new Date(),
       dateCollection: dateInit,
+      clientName:this.state.name
 
     })
       .then(function (docRef) {

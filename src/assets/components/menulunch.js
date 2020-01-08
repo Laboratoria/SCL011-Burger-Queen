@@ -83,6 +83,7 @@ handleInput= e => {
       totalOrderPrice: this.state.price[this.state.price.length - 1],
       state: "pendiente",
       dateCollection: dateInit,
+      clientName:this.state.name
 
     })
       .then(function (docRef) {
