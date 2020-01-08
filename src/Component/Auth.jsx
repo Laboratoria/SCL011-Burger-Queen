@@ -20,7 +20,7 @@ export default (props) => {
             console.log(errorMessage)
         });   
     }
-
+    
     const logOut= () => {
         firebase.auth().signOut().then(function() {
             // Sign-out successful.
@@ -42,11 +42,12 @@ export default (props) => {
             <button onClick={login}>Iniciar Sesion </button>
             </div>
             }
-            {
+            {  user &&
                 <React.Fragment>
-                user && <Navigation/><button onClick={logOut}>Cerrar sesion</button>
+                <Navigation/><button onClick={logOut}>Cerrar sesion</button>
                 </React.Fragment>
             }
         </div>
     )
+    
 }

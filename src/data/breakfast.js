@@ -8,7 +8,6 @@ export default class Breakfast extends Component {
 
     state = {
         items: [],
-        value:"",
     }
 // snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
     componentDidMount () {
@@ -22,15 +21,26 @@ export default class Breakfast extends Component {
         })
     }
 
-    actionButton = (e) => {
-        this.setState({
-            buttonValue:e.target.value
+    getOrder=()=>{
+
+        console.log("funcionando");
+
+        db.collection("pedidos").add({
+           
         })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+            
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+      
     }
 
 
     render () {
-        const { items, buttonValue} = this.state;
+        const {items} = this.state;
 
         return (
             <div>
@@ -43,17 +53,10 @@ export default class Breakfast extends Component {
                     <tbody>
                         { items && items !== undefined ? items.map((item, key) => (
                             <tr key={key}>
-                                {item.data.name}
+                                <td>{item.data.name}</td>
                                 <td>{item.data.price}</td>
-
                                 <td>
-                                <Button 
-                                value={buttonValue}
-                                onClick={this.actionButton}>
-
-                                </Button>
-                                <button onClick={e => this.setState({buttonValue})}>
-                                Agregar</button>
+                                <Button onClick={this.getOrder}>Agregar</Button>
                                 </td>
                     
                             </tr>
