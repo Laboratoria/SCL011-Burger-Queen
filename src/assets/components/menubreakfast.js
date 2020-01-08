@@ -13,13 +13,19 @@ class MenuBreakFast extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
-      json1: json1.Breakfast,
-      price: [],
-      product: []
-    }
+    json1:json1.Breakfast,
+    price: [],
+    product: [],
+    name: ''
   }
+}
 
+handleInput= e => {
+  console.log(e.value)
+  this.setState({
+   name:e.value
+ })
+ }
 
 
   selectProduct = (productMenu) => {
@@ -70,6 +76,7 @@ class MenuBreakFast extends Component {
     })
 
   }
+
   sendKitchen = () => {
     let date = new Date()
     let dateInit = date.getHours() + ":" + date.getMinutes();
@@ -115,7 +122,7 @@ class MenuBreakFast extends Component {
       </div>
       <div className="inputsContainer">
         <Combobox />
-        <InputName />
+        <InputName onChange1={(e)=>this.handleInput(e.target)} />
       </div>
       <div>
         {this.state.product.map((elementProduct, i) => {

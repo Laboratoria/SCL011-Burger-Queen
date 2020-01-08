@@ -10,8 +10,10 @@ class InputName extends Component {
         const { classes } = this.props;
         return (
         <div> 
+         
             <div className="title">2. NOMBRE CLIENTE</div>
-            <Input placeholder="Nombre cliente" className={classes.input} color="secondary"/>
+            <Input onChange={this.props.onChange1.bind(this)} placeholder="Nombre cliente" className={classes.input} color="secondary"/>
+
         </div>
         );
     }

@@ -12,15 +12,24 @@ import Combobox from '../components/combobox.js'
 class MenuLunch extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-      json: json1.Lunch,
-      price: [],
-      product: []
-    }
+     this.state={
+    json:json1.Lunch,
+    price:[],
+    product:[],
+    name: ''
+  
   }
-  selectProduct = (productMenu) => {
+}
 
+handleInput= e => {
+ console.log(e.value)
+ this.setState({
+  name:e.value
+})
+}
+
+
+  selectProduct = (productMenu) => {
     let productState = this.state.product;
     productState.push(productMenu);
 
@@ -103,7 +112,7 @@ class MenuLunch extends Component {
 
   render() {
     const { classes } = this.props;
-    return <div className="menusContainer">
+    return <div >
       <div className="commandContainer">
         {this.state.json.map((element) => (
           <ButtonMenu key={element.id} clickBtn={this.selectProduct} productProp={element} />
@@ -111,7 +120,7 @@ class MenuLunch extends Component {
       </div>
       <div className="inputsContainer">
         <Combobox />
-        <InputName />
+        <InputName onChange1={(e)=>this.handleInput(e.target)}/>
       </div>
       <div>
         {this.state.product.map((elementProduct, i) => {
@@ -128,6 +137,7 @@ class MenuLunch extends Component {
         </div>
       </div>
     </div>
+
   }
 }
 
