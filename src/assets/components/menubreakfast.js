@@ -17,29 +17,33 @@ class MenuBreakFast extends Component {
       product: []
     }
   }
-  clickBtn2 = (productMenu) => {
 
-    let productState = this.state.product;
-    productState.push(productMenu);
+  
 
-    this.setState({
-      product: productState
-    });
+clickBtn2=(productMenu)=>{
+   
+  let productState = this.state.product;
+  productState.push(productMenu);
+   
+   this.setState({
+     product: productState
+   }); 
+  
+   let totalPrice =this.state.product.map(elementProduct=>elementProduct.price)
+   
+   const total = totalPrice.reduce((acum, elemt) => acum + elemt, 0)
+   console.log(total)
+   
+   let precios = this.state.price;
+   precios.push(total)
+  
+   this.setState({
+    price: precios
+  }); 
+   console.log(this.state.price);
+   
+   console.log("ESTADO:", this.state.product);
 
-    let totalPrice = this.state.product.map(elementProduct => elementProduct.price)
-
-    const total = totalPrice.reduce((acum, elemt) => acum + elemt, 0)
-    console.log(total)
-
-    let precios = this.state.price;
-    precios.push(total)
-
-    this.setState({
-      price: precios
-    });
-    console.log(this.state.price);
-
-    console.log("ESTADO:", this.state.product);
   }
 
   //funcion para borrar post
@@ -60,37 +64,46 @@ class MenuBreakFast extends Component {
     statePrice.push(reducePrice)
 
     this.setState({
-      price: statePrice
-    })
 
+    price:statePrice
+  })
+  
+}
+sendKitchen=()=>{
+  let date = new Date ()
+  let dateInit = date.getHours() + ":" + date.getMinutes() ; 
+  db.collection("orders").add({
+
+    productTotal: this.state.product,
+    totalOrderPrice: this.state.price[this.state.price.length - 1],
+    state: "pendiente",
+    date:new Date(),
+    dateCollection:dateInit,
+   
+  })
+  .then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+    alert("Pedido envaido a cocina")
+  })
+
+  .catch(function(error) {
+    console.error("Error adding document: ", error);
+    alert("Error al enviar, intentelo denuevo")
+  });
+      let productsFilter = this.state.product;
+      let priceFilter  =this.state.price
+
+      priceFilter=[]
+      productsFilter=[]
+      
+      this.setState({
+      product:productsFilter,
+      price:priceFilter
+
+ }) 
   }
-  sendKitchen = () => {
-    db.collection("orders").add({
-      productTotal: this.state.product,
-      totalOrderPrice: this.state.price[this.state.price.length - 1]
-
-    })
-      .then(function (docRef) {
-        console.log("Document written with ID: ", docRef.id);
-        alert("Pedido envaido a cocina")
-      })
-
-      .catch(function (error) {
-        console.error("Error adding document: ", error);
-        alert("Error al enviar, intentelo denuevo")
-      });
-    let productsFilter = this.state.product;
-    let priceFilter = this.state.price
-
-    priceFilter = []
-    productsFilter = []
-
-    this.setState({
-      product: productsFilter,
-      price: priceFilter
-
-    })
-  }
+  
+  
   render() {
     const { classes } = this.props;
     return <div className="menusContainer">
@@ -117,6 +130,7 @@ class MenuBreakFast extends Component {
         </div>
       </div>
     </div>
+
   }
 }
 

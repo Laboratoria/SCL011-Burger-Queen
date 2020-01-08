@@ -61,9 +61,13 @@ clickBtn2=(productMenu)=>{
   
 } 
   sendKitchen=()=>{
+    let date = new Date ()
+    let dateInit = date.getHours() + ":" + date.getMinutes() ; 
   db.collection("orders").add({
     productTotal: this.state.product,
-    totalOrderPrice: this.state.price[this.state.price.length - 1]
+    totalOrderPrice: this.state.price[this.state.price.length - 1],
+    state: "pendiente",
+    dateCollection:dateInit,
    
   })
   .then(function(docRef) {
