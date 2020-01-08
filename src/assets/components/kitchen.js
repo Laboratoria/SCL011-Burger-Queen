@@ -49,7 +49,7 @@ class Kitchen extends Component{
             <input className="inputCheckbox" type="checkbox"   />Listo
            </div>
            ))}
-        }
+        
         </div>
           
            </div>

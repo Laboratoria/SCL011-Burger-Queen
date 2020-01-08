@@ -19,7 +19,7 @@ class MenuBreakFast extends Component {
 
   
 
-clickBtn2=(productMenu)=>{
+  selectProduct=(productMenu)=>{
    
   let productState = this.state.product;
   productState.push(productMenu);
@@ -81,7 +81,7 @@ sendKitchen=()=>{
   })
   .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
-    alert("Pedido envaido a cocina")
+    alert("Pedido enviado a cocina")
   })
 
   .catch(function(error) {
@@ -107,7 +107,7 @@ sendKitchen=()=>{
     return <div className="menusContainer">
       <div className="commandContainer">
         {this.state.json1.map((element) => (
-          <ButtonMenu key={element.id} clickBtn={this.clickBtn2} productProp={element} />
+          <ButtonMenu key={element.id} clickBtn={this.selectProduct} productProp={element} />
         ))}
       </div>
       <div>
