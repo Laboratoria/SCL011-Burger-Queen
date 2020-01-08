@@ -8,6 +8,7 @@ class Lunch extends Component {
 
         state={
             items:[],
+            orders: [],
         }
   
 // snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"

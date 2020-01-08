@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class productMenu extends Component {
+/*class productMenu extends Component {
 constructor () {
 super();
 
@@ -34,3 +34,11 @@ return (
 
 
 export default productMenu;
+*/
+
+
+    const ShowProduct =_ => 
+        <p>OÑA</p>
+    
+
+export default ShowProduct;

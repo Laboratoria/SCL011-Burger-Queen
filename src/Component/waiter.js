@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Breakfast from '../data/breakfast'
+import Breakfast from './Breakfast'
 import Lunch from '../data/lunch';
 
 import { BrowserRouter, Route } from "react-router-dom";

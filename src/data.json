@@ -1,20 +1,29 @@
 {
-    "breakfast":
+    "Breakfast":
     [
         {
         "id": 0,
-        "title": "cafe americano",
+        "name": "café americano",
         "price": 500
         },
+
         {
         "id": 1,
-        "title": "jugo de frutas natural",
-        "price": 1000
+        "name": "café con leche",
+        "price": 700
         },
-    {
+        
+        {
         "id": 2,
-        "title": "sandwich jamón y queso",
+        "name": "jugo de frutas natural",
+        "price": 700
+        },
+
+        {
+        "id": 3,
+        "name": "sandwich jamón y queso",
         "price": 1000
-    }
-]
+        }
+        
+    ]
 }

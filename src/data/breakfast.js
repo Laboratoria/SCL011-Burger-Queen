@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import db from '../config';
 import { Table } from "reactstrap";
-
+import ShowProduct from '../Component/productMenu'
 
 
 class Breakfast extends Component {
@@ -12,6 +12,7 @@ class Breakfast extends Component {
 
 // snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
     componentDidMount () {
+        const BreakfastCollection = 
         db.collection("breakfast").get().then((snapShots) => {
             this.setState({
                 items: snapShots.docs.map(doc => {
@@ -50,6 +51,9 @@ render () {
                             <td>
                             <button onClick={this.getOrder}>Agregar</button>
                             </td>
+                            <ShowProduct 
+                            name={item.data.name}
+                                />
                         </tr>
                     ))} 
                 </tbody>
