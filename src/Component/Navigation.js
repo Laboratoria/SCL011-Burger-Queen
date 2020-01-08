@@ -13,7 +13,8 @@ function Nav () {
                      <li>
                         <Link to="/navigation/kitchen">Cocina</Link>
                     </li>
-                </ul>       
+                </ul>  
+                    
         </div>
        
     );

@@ -8,6 +8,7 @@ class Breakfast extends Component {
 
     state = {
         items:[],
+
     }
 
 // snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
@@ -37,9 +38,9 @@ class Breakfast extends Component {
 
 // snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
 
+
 render () {
     const { items } = this.state;
-
     return (
         <div>
             <Table>
