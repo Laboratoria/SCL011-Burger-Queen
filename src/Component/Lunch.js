@@ -4,13 +4,13 @@ import db from '../config';
 import Button from './button'
 // import { Table } from "reactstrap";
 
-class Breakfast extends Component {
+class Lunch extends Component {
     // estados
 
     constructor (props) {
         super (props);
         this.state={
-            products : data.Breakfast,
+            products : data.Lunch,
             orders: [],
             price: 0
         };
@@ -73,7 +73,7 @@ class Breakfast extends Component {
         }
 
 render () {
-    const dataBreakfast = this.state.products.map((data, index) => {
+    const dataLunch = this.state.products.map((data, index) => {
     return (
         <div>
             <Button 
@@ -90,7 +90,7 @@ render () {
 
 return (
     <div>
-    {dataBreakfast}
+    {dataLunch}
     {this.state.orders.map((order, i) => {
         return (
             <div>
@@ -113,9 +113,4 @@ return (
 )}
 }
 
-export default Breakfast;
-
-
- 
- 
-//<button onClick={()=> this.deleteItem(i, order)}></button>
+export default Lunch;
