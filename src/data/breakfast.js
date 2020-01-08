@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
 import db from '../config';
-import { Table, Button } from "reactstrap";
+import { Table } from "reactstrap";
+import ShowProduct from '../Component/productMenu'
 
-// import { useFirebaseApp, useDatabaseList } from "reactfire";
- 
-export default class Breakfast extends Component {
+
+class Breakfast extends Component {
 
     state = {
-        items: [],
+        items:[],
+
     }
+
 // snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
     componentDidMount () {
+        const BreakfastCollection = 
         db.collection("breakfast").get().then((snapShots) => {
             this.setState({
                 items: snapShots.docs.map(doc => {
@@ -21,56 +24,44 @@ export default class Breakfast extends Component {
         })
     }
 
-    getOrder=()=>{
-
-        console.log("funcionando");
-
+    getOrder = () => {
         db.collection("pedidos").add({
-           
-        })
-        .then(function(docRef) {
-            console.log("Document written with ID: ", docRef.id);
-            
-        })
-        .catch(function(error) {
-            console.error("Error adding document: ", error);
-        });
-      
-    }
+            name: "", 
+            price: "",
+            })
+            .then ( () => {
+                console.log("ok")
+            }).catch ( () => {
+                console.log("error")
+            })
+        }
+
+// snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
 
 
-    render () {
-        const {items} = this.state;
-
-        return (
-            <div>
-                <Table>
-                    <thead>
-                        <tr>
-                           -
+render () {
+    const { items } = this.state;
+    return (
+        <div>
+            <Table>
+                <tbody>
+                    { items.map((item, index) => (
+                        <tr key={index}>
+                            <td>{item.data.name}</td>
+                            <td>{item.data.price}</td>
+                            <td>
+                            <button onClick={this.getOrder}>Agregar</button>
+                            </td>
+                            <ShowProduct 
+                            name={item.data.name}
+                                />
                         </tr>
-                    </thead>
-                    <tbody>
-                        { items && items !== undefined ? items.map((item, key) => (
-                            <tr key={key}>
-                                <td>{item.data.name}</td>
-                                <td>{item.data.price}</td>
-                                <td>
-                                <Button onClick={this.getOrder}>Agregar</Button>
-                                </td>
-                    
-                            </tr>
+                    ))} 
+                </tbody>
+            </Table>
+        </div>
+    )}
 
-                        )):null } 
-                    </tbody>
-                </Table>
-
-            </div>
-        )  
-    }
 }
 
-
-/*<button onClick={e => this.setState({buttonValue})}>
-                                Agregar</button>
-                                */
+export default Breakfast
