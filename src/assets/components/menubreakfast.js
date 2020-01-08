@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button'
 import Comments from '../components/comments.js'
 import { withStyles } from '@material-ui/core/styles'
 
-
 class MenuBreakFast extends Component {
   constructor(props) {
     super(props);
@@ -45,7 +44,6 @@ clickBtn2=(productMenu)=>{
    console.log("ESTADO:", this.state.product);
 
   }
-
   //funcion para borrar post
   remove(index, price) {
 
@@ -107,25 +105,22 @@ sendKitchen=()=>{
   render() {
     const { classes } = this.props;
     return <div className="menusContainer">
-      <div className="comandaContainer">
+      <div className="commandContainer">
         {this.state.json1.map((element) => (
           <ButtonMenu key={element.id} clickBtn={this.clickBtn2} productProp={element} />
         ))}
       </div>
       <div>
         {this.state.product.map((elementProduct, i) => {
-          return <div className="comanda2">
-            <p className="hola" key={elementProduct.id}>{elementProduct.product} ${elementProduct.price}</p>
-            <button onClick={this.remove.bind(this, i, elementProduct.price)}>
-              <i class="fas fa-trash-alt"></i>
-              Eliminar
-      </button>
+          return <div className="command">
+            <div key={elementProduct.id}>{elementProduct.product} ${elementProduct.price}</div>
+            <i className="trashIcon" onClick={this.remove.bind(this, i, elementProduct.price)} class="fas fa-trash-alt fa-lg">
+            </i>
           </div>
-
         })}
-        <div>
-          <Comments />
-          <p>Total {this.state.price[this.state.price.length - 1]}</p>
+        <div className="sendKitchenContainer">
+          <Comments /><br />
+          <p>Total ${this.state.price[this.state.price.length - 1]}</p>
           <Button variant="contained" className={classes.active} onClick={() => this.sendKitchen()}>Enviar a cocina</Button>
         </div>
       </div>
@@ -138,7 +133,6 @@ export default withStyles({
   active: {
     color: '#FFFFFF',
     backgroundColor: '#FFA800',
-    margin: '20px 20px',
     fontWeight: 'bold'
   }
 })(MenuBreakFast)
