@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
 import "firebase/auth";
-// import  db from'./config';
+import Navigation from'./Navigation';
 import { useFirebaseApp, useUser } from "reactfire";
 
 export default (props) => {
@@ -32,18 +32,20 @@ export default (props) => {
     return (
         <div>
             {
-                !user &&
+                !user && 
 
             <div>
             <label htmlFor="email">Correo</label>
             <input type="email" id="email" onChange={ (event) => setEmail(event.target.value)}/>
             <label htmlFor="password">Contraseña</label>
-            <input type="password" id="password" onChange={ (event) => setPassword(event.target.value)}/>
+            <input type="password" id="password" onChange={ (event) => setPassword(event.target.value)}/> 
             <button onClick={login}>Iniciar Sesion </button>
             </div>
             }
             {
-                user && <button onClick={logOut}>Cerrar sesion</button>
+                <React.Fragment>
+                user && <Navigation/><button onClick={logOut}>Cerrar sesion</button>
+                </React.Fragment>
             }
         </div>
     )

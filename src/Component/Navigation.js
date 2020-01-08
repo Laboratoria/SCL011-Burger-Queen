@@ -1,30 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Waiter from './waiter';
-import Kitchen from './kitchen';
+import { Link } from "react-router-dom";
 
 
 function Nav () {
     return (
-        <Router>
         <div>
                 <ul>
                     <li>
-                    <Link to='/waiter'>Meserx</Link>
-                    </li>
-                    <li>
-                        <Link to='/kitchen'>Cocina</Link>
-                    </li>
-                </ul>
+                    <Link to="/navigation/waiter">Meserx</Link>
 
-            <Route exact path="/waiter" component={ Waiter } />
-            <Route path="/kitchen" component={ Kitchen } />
-            
+                    </li>
+                     <li>
+                        <Link to="/navigation/kitchen">Cocina</Link>
+                    </li>
+                </ul>       
         </div>
-        </Router>
        
     );
 }
-
 
 export default Nav;

@@ -60,6 +60,7 @@ render () {
             </Table>
         </div>
     )}
+
 }
 
 export default Breakfast

@@ -46,6 +46,8 @@ class Lunch extends Component {
                                 <td>{item.data.name}</td>
                                 <td>{item.data.price}</td>
                                 <button onClick={this.getOrder}>Agregar</button>
+                                <td><Button>Agregar</Button></td>
+
                             </tr>
 
                         ) ):null } 

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import Breakfast from './Breakfast'
-import Lunch from './Lunch';
+import { Link } from "react-router-dom";
 
-import { BrowserRouter, Route } from "react-router-dom";
 
 class InputClient extends Component {
 
     state = {
         value:"",
+      //  showBreakfast:false  
     }
 
     render () {
@@ -25,28 +24,27 @@ class InputClient extends Component {
 }
 
 
-const Waiter = (props) => {
+const Waiter = () => {
 
-    const { history } = props;
+    
 
     return (
-        <BrowserRouter>
-                <div>
+       
+            <div>
                   <div>
                       <InputClient />
                       <br />
                   </div>
-                <button onClick={() => history.push('/breakfast')}>
-                    Desayuno
-                    </button>
-                    <Breakfast />
-                    <button onClick={() => history.push('/lunch')}>
-                    Almuerzo
-                    </button>
-                    <Lunch />
-                    <Route path="/breakfast" component={ Breakfast } />
-                </div>    
-        </BrowserRouter>
+                  <ul>
+                    <li>
+                        <Link to="/navigation/waiter/breakfast">Desayuno</Link>
+                    </li>
+                    <li>
+                        <Link to="/navigation/waiter/lunch">Almuerzo</Link>
+                    </li> 
+                </ul>
+            </div>    
+      
     )
 }
 

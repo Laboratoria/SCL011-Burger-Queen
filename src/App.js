@@ -4,28 +4,33 @@ import './App.css';
 //import Breakfast from './data/breakfast';
 //import Lunch from './data/lunch';
 import Auth from './Component/Auth';
-import Nav from './Component/Navigation'
+import Nav from './Component/Navigation';
+import Waiter from './Component/waiter';
+import Kitchen from './Component/kitchen';
+import Breakfast from './data/breakfast';
+import Lunch from './data/lunch';
 import { useUser } from 'reactfire' ;
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 
-import { BrowserRouter } from 'react-router-dom';
 
 function App () {
 
     const user = useUser();
 
     return (
-      <BrowserRouter>
+      <Router>
         <div className="App">
-            { user && <p>Usuario:{user.email}</p> }
-            <Auth />
-            <Nav />
-            
+            { user && <p>Meser@:{user.email}</p> }
+            <Route exact path="/" component={Auth}/>
+            <Route exact path ="/navigation" component={Nav} />
+            <Route  path="/navigation/waiter" component={ Waiter } />
+            <Route  path="/navigation/kitchen" component={ Kitchen } />
+            <Route  path="/navigation/waiter/breakfast" component={ Breakfast } />
+            <Route  path="/navigation/waiter/lunch" component={ Lunch} />
         </div>
-      </BrowserRouter>
+      </Router>
     );
 }
-  
-
 export default App;
 
 
