@@ -1,0 +1,97 @@
+{
+    "Breakfast":
+    [
+        {
+            "id": 0,
+            "name": "café americano",
+            "price": 500
+        },
+
+        {
+            "id": 1,
+            "name": "café con leche",
+            "price": 700
+        },
+        
+        {
+            "id": 2,
+            "name": "jugo de frutas natural",
+            "price": 700
+        },
+
+        {
+            "id": 3,
+            "name": "sandwich jamón y queso",
+            "price": 1000
+        }
+    ],
+
+    "Lunch":
+    [
+        {
+            "id": 4,
+            "name": "hamburguesa simple",
+            "price": 1000
+        }, 
+
+        {
+            "id": 5,
+            "name": "hamburguesa doble",
+            "price": 1500
+        }, 
+
+        {
+            "id": 6,
+            "name": "agua 500ml",
+            "price": 500
+        }, 
+
+        {
+            "id": 7,
+            "name": "agua 750ml",
+            "price": 700
+        }, 
+
+        {
+            "id": 8,
+            "name": "bebida 500ml",
+            "price": 700
+        }, 
+
+        {
+            "id": 9,
+            "name": "bebida 750ml",
+            "price": 1000
+        }, 
+
+        {
+            "id": 10,
+            "name": "papas fritas",
+            "price": 500
+        }, 
+
+        {
+            "id": 11,
+            "name": "aros de cebolla",
+            "price": 500
+        }, 
+
+        {
+            "id": 11,
+            "name": "aros de cebolla",
+            "price": 500
+        }, 
+
+        {
+            "id": 12,
+            "name": "agregado: QUESO",
+            "price": 100
+        }, 
+
+        {
+            "id": 13,
+            "name": "agregado: HUEVO",
+            "price": 100
+        }
+    ]
+}
