@@ -100,17 +100,19 @@
       },
       {
         "id" : 12,
-        "name": "Queso",
-        "price" : 1000,
-        "category": "Agregados",
-        "img": "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A03.png?alt=media&token=71ffc3f4-3c89-4013-8dd4-3d18ae8a599c"
+        "name": "Promo B 50 Bocados mixtos",
+        "price" : 10000,
+        "category": "menu",
+        "protein" :["kani apanado 10","salmon queso cebollin","hosomaki camaron queso","pollo queso cebollin","nigiri"],
+        "img": ""
       },
       {
         "id" : 13,
-        "name": "Huevos",
-        "price" : 1000,
+        "name": "nagai Crocke",
+        "price" : 3200,
         "category": "Agregados",
-        "img": "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A04.png?alt=media&token=ddddc77a-e7d0-44fc-8322-01631e5dc259"
+        "protein":["bolitas de jaiba con queso crema", "cebolla", "apanado en panko"],
+        "img": ""
       }
       
     ]
