@@ -1,0 +1,120 @@
+{
+    "menu": [
+      {
+        "id" : 1,
+        "name" : "sushikatsu",
+        "price" : 3000,
+        "category": "comestible",
+        "protein" : ["brochetas de pollo"],
+        "img" : ""
+  
+      },
+      {
+        "id" : 2,
+        "name" : "gyosas",
+        "price" : 2000,
+        "category": "comestible",
+        "img" : ""
+        
+  
+      },
+      {
+        "id" : 3,
+        "name" : "tempura mix",
+        "price" : 3000,
+        "category": "Comida",
+        "img" : ""
+  
+      }
+    
+    ],
+  
+    "entrada": [
+      {
+        "id" : 5,
+        "name": "ceviche mixto",
+        "price" : 5200,
+        "category": "Comida",
+        "protein" : [ "pulpo", "camarones", "salmon"],
+        "img" : "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A01.png?alt=media&token=49632482-8f3b-4017-a547-735031199b89"
+  
+      },
+      
+      {
+        "id" : 6,
+        "name": "menu nagai1",
+        "price" : 5500,
+        "category": "Comida",
+        "protein" : [ "california tempura 10", "nigiri sake 2", "hosomaki del cheff 10"],
+        "img" : ""
+  
+      },
+      {
+        "id" : 7,
+        "name": "menu nagai2",
+        "price" : 10500,
+        "category": "comida",
+        "protein" :["tempura roll 10","kani apanado 10", "vege roll 10","chiky roll 10","tempura maki 10"],
+        "img" : ""
+  
+      },{
+        "id" : 8,
+        "name": "promo a 50 bocados frios",
+        "price" : 10500,
+        "category": "Promo",
+        "protein" : ["kanikama queso cebollin","camaron queso cebollin","salmon queso cebollin","pollo queso cebollin","hosomaki camaron queso"],
+        "img" : ""
+  
+      },
+      {
+        "id" : 9,
+        "name": "Agua 500ml",
+        "price" : 500,
+        "category": "Bebestible",
+        "img" : "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A07.png?alt=media&token=baa05f91-cb50-4041-9218-8315228ce2c2"
+  
+      },    
+      {
+        "id" : 10,
+        "name": "Agua 750ml",
+        "price" : 700,
+        "category": "Bebestible",
+        "img" : "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A08.png?alt=media&token=007eaa6b-1f8f-4790-994c-5339921a6989"
+  
+      },
+      {
+        "id" : 11,
+        "name": "Bebida 500ml",
+        "price" : 700,
+        "category": "Bebestible",
+        "img" : "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A09.png?alt=media&token=fbc83d89-fce3-4778-98a3-6241e7d44553"
+  
+      },
+      {
+        "id" : 11,
+        "name": "Bebida 750ml",
+        "price" : 1000,
+        "category": "Bebestible",
+        "img" : "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A010.png?alt=media&token=7ece96c7-0e76-4e5c-877c-d8324e0137fe"
+  
+      },
+      {
+        "id" : 12,
+        "name": "Queso",
+        "price" : 1000,
+        "category": "Agregados",
+        "img": "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A03.png?alt=media&token=71ffc3f4-3c89-4013-8dd4-3d18ae8a599c"
+      },
+      {
+        "id" : 13,
+        "name": "Huevos",
+        "price" : 1000,
+        "category": "Agregados",
+        "img": "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A04.png?alt=media&token=ddddc77a-e7d0-44fc-8322-01631e5dc259"
+      }
+      
+    ]
+  
+  
+  }
+  
