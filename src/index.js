@@ -2,11 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
 
-import Init from "./components/Init";
+import "./global.css";
+//import Init from "./components/Init";
+import Tables from "./components/tables";
 
 const container = document.getElementById("root");
 
-ReactDOM.render(<Init />, container);
+ReactDOM.render(<Tables />, container);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
