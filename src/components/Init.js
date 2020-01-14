@@ -2,6 +2,7 @@ import React from "react";
 
 import Logo from "../images/logopequeño.png";
 import "./styles/Init.css";
+import ButtonBasic from "./btnBasic";
 
 class Init extends React.Component {
   render() {
@@ -11,8 +12,8 @@ class Init extends React.Component {
           <img src={Logo} alt="Logo" />
         </div>
         <div>
-          <button>Mesero</button>
-          <button>Cocinero</button>
+          <ButtonBasic name="Mesero" />
+          <ButtonBasic name="Cocinero" />
         </div>
       </div>
     );
