@@ -13,7 +13,7 @@ class Init extends React.Component {
         <div>
           <button>Mesero</button>
           <button>Cocinero</button>
-        </div>
+          </div>
       </div>
     );
   }
