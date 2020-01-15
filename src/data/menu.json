@@ -36,7 +36,7 @@
         "price" : 5200,
         "category": "Comida",
         "protein" : [ "pulpo", "camarones", "salmon"],
-        "img" : "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A01.png?alt=media&token=49632482-8f3b-4017-a547-735031199b89"
+        "img" : ""
   
       },
       
@@ -71,7 +71,7 @@
         "name": "Agua 500ml",
         "price" : 500,
         "category": "Bebestible",
-        "img" : "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A07.png?alt=media&token=baa05f91-cb50-4041-9218-8315228ce2c2"
+        "img" : ""
   
       },    
       {
@@ -79,7 +79,7 @@
         "name": "Agua 750ml",
         "price" : 700,
         "category": "Bebestible",
-        "img" : "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A08.png?alt=media&token=007eaa6b-1f8f-4790-994c-5339921a6989"
+        "img" : ""
   
       },
       {
@@ -87,7 +87,7 @@
         "name": "Bebida 500ml",
         "price" : 700,
         "category": "Bebestible",
-        "img" : "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A09.png?alt=media&token=fbc83d89-fce3-4778-98a3-6241e7d44553"
+        "img" : ""
   
       },
       {
@@ -95,7 +95,7 @@
         "name": "Bebida 750ml",
         "price" : 1000,
         "category": "Bebestible",
-        "img" : "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A010.png?alt=media&token=7ece96c7-0e76-4e5c-877c-d8324e0137fe"
+        "img" : ""
   
       },
       {

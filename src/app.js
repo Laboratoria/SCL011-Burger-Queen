@@ -1,11 +1,13 @@
 import React from "react";
 import {useFirebaseApp} from "reactfire";
+import Tables from "./components/tables";
 
-function  (){
-    const firebase =useFirebaseApp();
+
+funcion App(){
+    const firebase = useFirebaseApp();
     console.log(firebase);
     return(
-        <init/>
+   <Tables/>
     );
 }
-export default;
+export default App;
