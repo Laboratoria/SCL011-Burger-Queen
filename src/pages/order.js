@@ -1,17 +1,36 @@
 import React from "react";
-import ButtonBasic from "./btnBasic";
+import ButtonBasic from "../components/btnBasic";
+
+import Navbar from "../components/Navbar"
+import { Link } from "react-router-dom";
 
 class Order extends React.Component {
+  state = { boton: {} };
+  handleClick = e => {
+    this.setState({
+      boton: {
+        ...this.state.form,
+        [e.target.name]: e.targer.value
+      }
+    });
+  };
   render() {
     return (
       <div>
         <div className="container">
+          <Navbar />
           <div className="row">
             <div className="col-6">
               <div>
                 <h2> Desayuno</h2>
-                <ButtonBasic name="Café americano $500" />
-                <ButtonBasic name="Café con leche $700" />
+                <ButtonBasic
+                  name="Café americano $500"
+                  onClick={this.handleClick}
+                />
+                <ButtonBasic
+                  name="Café con leche $700"
+                  onClick={this.handleClick}
+                />
                 <ButtonBasic name="Sandwich de jamón y queso $1000" />
                 <ButtonBasic name="Jugo de frutas natural $700" />
               </div>
@@ -39,15 +58,16 @@ class Order extends React.Component {
           </div>
         </div>
 
-        <div className="container">
-          <div className="row">
-            <div className="col-6">
-              <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <div className="row">
+          <div className="col-6">
+            <div>
+              <textarea name="total" id="" cols="6" ></textarea>
             </div>
           </div>
         </div>
         <div>
-          <ButtonBasic name="Historial de pedidos" />
+          <ButtonBasic name="Historial de pedidos" /> <Link to="/principal" className="btn btn-success">Volver</Link>
         </div>
       </div>
     );
