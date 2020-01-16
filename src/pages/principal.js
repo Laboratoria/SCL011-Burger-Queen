@@ -2,10 +2,11 @@ import React from "react";
 
 import "../global.css";
 import Navbar from "../components/Navbar";
-import ButtonBasic from "../components/btnBasic";
 import "./styles/principal.css";
+import { Link } from "react-router-dom";
 
 class Principal extends React.Component {
+
   render() {
     return (
       <div>
@@ -15,12 +16,12 @@ class Principal extends React.Component {
             <div className="row">
               <div className="col-6">
                 <div className="waiter">
-                  <ButtonBasic name="Mesero" />
+                  <Link to="/order" className="btn btn-success">Mesero</Link>
                 </div>
               </div>
               <div className="col-6">
                 <div className="chef ">
-                  <ButtonBasic name="Cocinero" />
+                  <Link to="" className="btn btn-success">Cocinero</Link>
                 </div>
               </div>
             </div>

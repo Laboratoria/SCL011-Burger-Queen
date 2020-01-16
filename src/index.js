@@ -4,13 +4,13 @@ import "bootstrap/dist/css/bootstrap.css";
 import * as serviceWorker from "./serviceWorker";
 
 import "./global.css";
-import Order from "./components/order"
+import App from './components/App';
 
 
 const container = document.getElementById("root");
 
 ReactDOM.render(<Order />, container);
- 
+
 
 
 // If you want your app to work offline and load faster, you can change
