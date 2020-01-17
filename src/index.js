@@ -4,12 +4,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import * as serviceWorker from "./serviceWorker";
 
 import "./global.css";
-import App from './components/App';
+import Opp from './components/App';
 
 
 const container = document.getElementById("root");
 
-ReactDOM.render(<Order />, container);
+ReactDOM.render(<Opp />, container);
 
 
 
