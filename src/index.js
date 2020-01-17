@@ -1,12 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.css";
 import * as serviceWorker from "./serviceWorker";
 
-import Init from "./components/Init";
+import "./global.css";
+import Opp from './components/App';
+
 
 const container = document.getElementById("root");
 
-ReactDOM.render(<Init />, container);
+ReactDOM.render(<Opp />, container);
+
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -1,0 +1,122 @@
+{
+    "menu": [
+      {
+        "id" : 1,
+        "name" : "sushikatsu",
+        "price" : 3000,
+        "category": "comestible",
+        "protein" : ["brochetas de pollo"],
+        "img" : ""
+  
+      },
+      {
+        "id" : 2,
+        "name" : "gyosas",
+        "price" : 2000,
+        "category": "comestible",
+        "img" : ""
+        
+  
+      },
+      {
+        "id" : 3,
+        "name" : "tempura mix",
+        "price" : 3000,
+        "category": "Comida",
+        "img" : ""
+  
+      }
+    
+    ],
+  
+    "entrada": [
+      {
+        "id" : 5,
+        "name": "ceviche mixto",
+        "price" : 5200,
+        "category": "Comida",
+        "protein" : [ "pulpo", "camarones", "salmon"],
+        "img" : ""
+  
+      },
+      
+      {
+        "id" : 6,
+        "name": "menu nagai1",
+        "price" : 5500,
+        "category": "Comida",
+        "protein" : [ "california tempura 10", "nigiri sake 2", "hosomaki del cheff 10"],
+        "img" : ""
+  
+      },
+      {
+        "id" : 7,
+        "name": "menu nagai2",
+        "price" : 10500,
+        "category": "comida",
+        "protein" :["tempura roll 10","kani apanado 10", "vege roll 10","chiky roll 10","tempura maki 10"],
+        "img" : ""
+  
+      },{
+        "id" : 8,
+        "name": "promo a 50 bocados frios",
+        "price" : 10500,
+        "category": "Promo",
+        "protein" : ["kanikama queso cebollin","camaron queso cebollin","salmon queso cebollin","pollo queso cebollin","hosomaki camaron queso"],
+        "img" : ""
+  
+      },
+      {
+        "id" : 9,
+        "name": "Agua 500ml",
+        "price" : 500,
+        "category": "Bebestible",
+        "img" : ""
+  
+      },    
+      {
+        "id" : 10,
+        "name": "Agua 750ml",
+        "price" : 700,
+        "category": "Bebestible",
+        "img" : ""
+  
+      },
+      {
+        "id" : 11,
+        "name": "Bebida 500ml",
+        "price" : 700,
+        "category": "Bebestible",
+        "img" : ""
+  
+      },
+      {
+        "id" : 11,
+        "name": "Bebida 750ml",
+        "price" : 1000,
+        "category": "Bebestible",
+        "img" : ""
+  
+      },
+      {
+        "id" : 12,
+        "name": "Promo B 50 Bocados mixtos",
+        "price" : 10000,
+        "category": "menu",
+        "protein" :["kani apanado 10","salmon queso cebollin","hosomaki camaron queso","pollo queso cebollin","nigiri"],
+        "img": ""
+      },
+      {
+        "id" : 13,
+        "name": "nagai Crocke",
+        "price" : 3200,
+        "category": "Agregados",
+        "protein":["bolitas de jaiba con queso crema", "cebolla", "apanado en panko"],
+        "img": ""
+      }
+      
+    ]
+  
+  
+  }
+  
