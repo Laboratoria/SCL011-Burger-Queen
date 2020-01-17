@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 class Order extends React.Component {
   state = { boton: {} };
-  handleClick = e => {
+  handleChange = e => {
     this.setState({
       boton: {
         ...this.state.form,
@@ -25,7 +25,7 @@ class Order extends React.Component {
                 <h2> Desayuno</h2>
                 <ButtonBasic
                   name="Café americano $500"
-                  onClick={this.handleClick}
+                  onChange={this.handleChange}
                 />
                 <ButtonBasic
                   name="Café con leche $700"
@@ -62,12 +62,11 @@ class Order extends React.Component {
         <div className="row">
           <div className="col-6">
             <div>
-              <textarea name="total" id="" cols="6" ></textarea>
             </div>
           </div>
         </div>
         <div>
-          <ButtonBasic name="Historial de pedidos" /> <Link to="/principal" className="btn btn-success">Volver</Link>
+          <Link to="/orderHistory" className="btn btn-success">Historial Pedido</Link><Link to="/" className="btn btn-success">Enviar</Link> <Link to="/principal" className="btn btn-success">Volver</Link>
         </div>
       </div>
     );
