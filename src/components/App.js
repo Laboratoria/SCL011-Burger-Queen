@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Principal from '../pages/principal';
 import Order from '../pages/order';
 
-function App() {
+function Opp() {
     return (
         <BrowserRouter>
             <Switch>
@@ -14,4 +14,4 @@ function App() {
     )
 }
 
-export default App;
+export default Opp;
