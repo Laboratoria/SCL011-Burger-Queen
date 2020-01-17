@@ -21,7 +21,7 @@ class Principal extends React.Component {
               </div>
               <div className="col-6">
                 <div className="chef ">
-                  <Link to="" className="btn btn-success">Cocinero</Link>
+                  <Link to="/chefTables" className="btn btn-success">Cocinero</Link>
                 </div>
               </div>
             </div>
